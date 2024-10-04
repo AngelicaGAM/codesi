@@ -1,55 +1,53 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { IoLocationOutline } from "react-icons/io5";
 import { motion } from 'framer-motion';
 import logoFooter from '../../assets/images/footer.png'
 
 const Footer: React.FC = () => {
   return (
     <footer style={footerStyles}>
-      <div style={columnStyles}>
-        <motion.img
-          src={logoFooter}
-          alt="Company Logo"
-          style={logoStyles}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        />
+      <div style={divStyles}>
+        <div style={columnStyles}>
+          <motion.img
+            src={logoFooter}
+            alt="Company Logo"
+            style={logoStyles}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          />
+        
+        </div>
+        <div style={columnStyles}>
+          <motion.div
+            style={contactItemStyles}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaEnvelope style={iconStyles} />
+            <span style={textStyles}> contacto@grupocodesi.com.mx
+            </span>
+          </motion.div>
+          <motion.div
+            style={contactItemStyles}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaPhone style={iconStyles} />
+            <span style={textStyles}>998 303 072 6</span>
+          </motion.div>
+        </div>
       </div>
-      <div style={columnStyles}>
+      <div style={columnStylesDown}>
         <motion.div
           style={contactItemStyles}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <FaPhone style={iconStyles} />
-          <span style={textStyles}>+1 (123) 456-7890</span>
-        </motion.div>
-        <motion.div
-          style={contactItemStyles}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaPhone style={iconStyles} />
-          <span style={textStyles}>+1 (098) 765-4321</span>
-        </motion.div>
-        <motion.div
-          style={contactItemStyles}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaPhone style={iconStyles} />
-          <span style={textStyles}>+1 (555) 123-4567</span>
-        </motion.div>
-      </div>
-      <div style={columnStyles}>
-        <motion.div
-          style={contactItemStyles}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaEnvelope style={iconStyles} />
-          <span style={textStyles}>contact@company.com</span>
+          <FaMapMarkerAlt style={iconStyles} />
+          <span style={textStylesMap}> Supermanzana 96, Mz.8 Lt.1
+          CP 77535, Benito Juarez, Quintana Roo.</span>
         </motion.div>
         <motion.div
           style={contactItemStyles}
@@ -57,28 +55,48 @@ const Footer: React.FC = () => {
           whileTap={{ scale: 0.95 }}
         >
           <FaMapMarkerAlt style={iconStyles} />
-          <span style={textStyles}>1234 Company St, City, Country</span>
+          <span style={textStylesMap}>Montecito Número 38, Piso 28, Oficina 16, Colonia
+          Napoles CP 03810, Benito Juarez, Wtc Cdmx</span>
         </motion.div>
+        <motion.div
+          style={contactItemStyles}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaMapMarkerAlt style={iconStyles} />
+          <span style={textStylesMap}>Calle 22 Número 290 x 31 Poliginon 108.
+          CP 97143</span>
+        </motion.div>
+
       </div>
+
     </footer>
   );
 };
 
 // Estilos en línea
 const footerStyles: React.CSSProperties = {
-  display: 'flex',
-  justifyContent: 'space-around',
-  alignItems: 'flex-start',
+  display: 'grid',
+  justifyContent: 'normal',
   padding: '20px',
-  backgroundColor: '#f0f0f0',
-  borderTop: '1px solid #ccc',
+  backgroundColor: '#152347',
   flexWrap: 'wrap',
 };
 
 const columnStyles: React.CSSProperties = {
-  flex: '1',
-  minWidth: '250px',
+  width: '50%',
   padding: '10px',
+};
+
+
+const divStyles: React.CSSProperties = {
+  display: 'flex',
+  background: 'red'
+ };
+
+const columnStylesDown: React.CSSProperties = {
+ display: 'flex',
+ justifyContent: 'space-around'
 };
 
 const logoStyles: React.CSSProperties = {
@@ -95,13 +113,25 @@ const contactItemStyles: React.CSSProperties = {
 };
 
 const iconStyles: React.CSSProperties = {
-  color: '#007bff', // Azul
+  color: 'white', // Azul
   fontSize: '1.5rem',
 };
 
 const textStyles: React.CSSProperties = {
   fontSize: '1rem',
-  color: '#333',
+  color: 'white',
+  fontWeight: '100',
+  alignSelf: 'center',
+  textAlign: 'justify'
+};
+
+const textStylesMap: React.CSSProperties = {
+  fontSize: '1rem',
+  color: 'white',
+  fontWeight: '100',
+  alignSelf: 'center',
+  textAlign: 'justify',
+  maxWidth: '250px'
 };
 
 export default Footer;

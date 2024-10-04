@@ -1,115 +1,95 @@
-import React, { CSSProperties } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { Tabs, Tab, Box, Typography } from '@mui/material';
+import image2 from '../assets/images/services/image2.jpg';
 import './OurServices.css';
-import ServiceCard from './ServiceCard';
-interface CarouselCardProps {
-  logo: string;
-  text: string;
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
 }
 
-const CarouselCard: React.FC<CarouselCardProps> = ({ logo, text }) => {
-  const cardStyle: CSSProperties = {
-    backgroundColor: 'white',
-    borderRadius: '10px',
-    overflow: 'hidden',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.3s ease',
-    maxWidth: '300px',
-    margin: '1rem',
-    cursor: 'pointer',
-  };
-
-  const logoStyle: CSSProperties = {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover',
-  };
-
-  const textStyle: CSSProperties = {
-    color: '#333',
-    textAlign: 'center',
-  };
-
+const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other }) => {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} style={cardStyle}>
-      <img src={logo} alt="Logo" style={logoStyle} />
-      <p style={textStyle}>{text}</p>
-    </motion.div>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
   );
 };
 
 const OurServices: React.FC = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
   };
-
-  const containerStyle: CSSProperties = {
-    marginTop:'3rem',
-    marginBottom: '3rem',
-    backgroundColor: 'white',
-  };
-
-  const cardsData = [
-    {
-      logo: 'https://grupoactiva.es/wp-content/uploads/2023/06/updated_Negocio_Consultoria.jpg',
-      text: 'Consultoría de Negocios',
-    },
-    {
-      logo: 'https://tse4.mm.bing.net/th?id=OIP.jNhkXH2W83dvbmAnYvDyqgHaEL&pid=Api&P=0&h=180',
-      text: 'Consultoría Financiera',
-    },
-    {
-      logo: 'https://tse3.mm.bing.net/th?id=OIP.NF-yrJy_8yWtlcyMjFZZNQHaE8&pid=Api&P=0&h=180',
-      text: 'Consultoría de Marketing',
-    },
-    {
-      logo: 'https://tse3.mm.bing.net/th?id=OIP.9nJ7i9ewCBMdiaW7zCxBCwHaE7&pid=Api&P=0&h=180',
-      text: 'Consultoría de Gestión',
-    },
-    {
-      logo: 'https://tse1.mm.bing.net/th?id=OIP._RevHXOjr2pyrizgtSoRywHaEX&pid=Api&P=0&h=180',
-      text: 'Consultoría Contable y Fiscal',
-    },
-    {
-      logo: 'https://tse2.mm.bing.net/th?id=OIP.Q362i6rnhNRyhQgu0ouXiAAAAA&pid=Api&P=0&h=180',
-      text: 'Consultoría de Capital Humano y jurídica',
-    },
-  ];
-
+ 
   return (
-    <div style={containerStyle}>
-      <h2 style={{ color: '#0056b3', marginBottom: '2rem' }}>Nuestros servicios</h2>
-      <Slider {...settings}>
-        {cardsData.map((card, index) => (
-          <ServiceCard key={index} image={card.logo} text={card.text} />
-        ))}
-      </Slider>
-    </div>
+    <Box sx={{ width: '100%', marginTop: '3rem' }}>
+      <h2> Nuestros Servicios</h2>
+      <div className='circleDiv'>
+        <div className='circleServices'> Administrativos </div>
+        <div  className='circleServices'> Legales </div>
+        <div  className='circleServices'> Fiscal </div>
+        <div  className='circleServices'> Contables </div>
+        <div  className='circleServices'> Servicios de Contribución Social </div>
+      </div>
+
+      <div>
+        <Tabs value={value} onChange={handleChange} centered>
+          <Tab label="Administrativos" />
+          <Tab label="Legales" />
+          <Tab label="Fiscal" />
+        </Tabs>
+
+        <TabPanel value={value} index={0}>
+          <div className='corpSolutions'>
+            <div className='text-corp'>
+              <ul>
+                <li>  Consultoría </li>
+                <li>  Administración de negocios</li>
+                <li>  Elaboración de manuales de procesos</li>
+                <li>  Elaboración de programas internos y planes de emergencia</li>
+                <li>  Elaboración de Programas internos</li>
+                <li>  Elaboración de Planes de Emergencia</li>
+                <li>  Elaboración de Dictámenes Eléctricos</li>
+                <li>  Elaboración de Dictámenes de Gas</li>
+                <li>  Constancias de Primeros Auxilios y Evacuación</li>
+              </ul>
+            </div>
+            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+          </div>
+
+        </TabPanel>
+
+        <TabPanel value={value} index={1}>
+          <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+          <ul>
+            <li> Consultoría</li>
+            <li>      Elaboración de contratos</li>
+            <li>      Registro de Marca ante el IMPI</li>
+            <li>      Gestión de tramites federales, estatales y municipales</li>
+            <li>  Constitución empresarial</li>
+            <li>  Elaboración de poderes legales</li>
+          </ul>
+        </TabPanel>
+
+        <TabPanel value={value} index={2}>
+          <ul>
+            <li></li>
+          </ul>
+          <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+        </TabPanel>
+      </div>
+    </Box>
   );
 };
 

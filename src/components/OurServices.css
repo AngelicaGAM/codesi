@@ -1,4 +1,24 @@
-.slick-slide{
-    display: flex !important;
-    justify-content: center !important;
+.circleDiv{
+  display: flex;
+  .circleServices{
+    background: blue;
+    border-radius: 50%;
   }
+}
+.corpSolutions {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+  .text-corp {
+    font-size: 1.1rem;
+        background: white;
+        text-align: justify;
+        padding: 1rem;
+        align-content: center;
+  }
+
+  .image {
+    max-width: 50%;
+    max-height: 40%;
+  }
+}
