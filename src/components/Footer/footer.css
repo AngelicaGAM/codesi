@@ -1,0 +1,35 @@
+.logophone {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        display: grid !important;
+        justify-content: center !important;
+    }
+}
+
+.footer {
+
+    @media (max-width: 768px) {
+        img {
+            height: 110px !important;
+        }
+    }
+}
+
+.footerLocation {
+    @media (max-width: 768px) {
+        display: grid !important;
+        justify-content: space-around !important;
+
+    }
+
+}
+
+.columnFooter {
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+    }
+}

@@ -1,14 +1,15 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { IoLocationOutline } from "react-icons/io5";
 import { motion } from 'framer-motion';
 import logoFooter from '../../assets/images/footer.png'
+import './footer.css';
+
 
 const Footer: React.FC = () => {
   return (
-    <footer style={footerStyles}>
-      <div style={divStyles}>
-        <div style={columnStyles}>
+    <footer className='footer' style={footerStyles}>
+      <div className='logophone' style={divStyles}>
+        <div className='columnFooter' style={columnStyles}>
           <motion.img
             src={logoFooter}
             alt="Company Logo"
@@ -19,7 +20,7 @@ const Footer: React.FC = () => {
           />
         
         </div>
-        <div style={columnStyles}>
+        <div className='columnFooter' style={columnStyles}>
           <motion.div
             style={contactItemStyles}
             whileHover={{ scale: 1.05 }}
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      <div style={columnStylesDown}>
+      <div className='footerLocation' style={columnStylesDown}>
         <motion.div
           style={contactItemStyles}
           whileHover={{ scale: 1.05 }}
@@ -84,14 +85,12 @@ const footerStyles: React.CSSProperties = {
 };
 
 const columnStyles: React.CSSProperties = {
-  width: '50%',
-  padding: '10px',
+  padding: '0px',
 };
 
 
 const divStyles: React.CSSProperties = {
   display: 'flex',
-  background: 'red'
  };
 
 const columnStylesDown: React.CSSProperties = {
@@ -110,6 +109,7 @@ const contactItemStyles: React.CSSProperties = {
   cursor: 'pointer',
   margin: '10px 0',
   transition: 'transform 0.3s ease',
+
 };
 
 const iconStyles: React.CSSProperties = {
