@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import logoFooter from '../../assets/images/footer.png'
+import logoFooter from '../../assets/images/logoFooter.png'
 import './footer.css';
 
 
@@ -14,13 +14,11 @@ const Footer: React.FC = () => {
             src={logoFooter}
             alt="Company Logo"
             style={logoStyles}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           />
         
         </div>
-        <div className='columnFooter' style={columnStyles}>
+        <div className='columnFooter mail-phone' style={columnStyles}>
           <motion.div
             style={contactItemStyles}
             whileHover={{ scale: 1.05 }}
@@ -79,7 +77,7 @@ const Footer: React.FC = () => {
 const footerStyles: React.CSSProperties = {
   display: 'grid',
   justifyContent: 'normal',
-  padding: '20px',
+  padding: '1rem 6rem',
   backgroundColor: '#152347',
   flexWrap: 'wrap',
 };
@@ -95,11 +93,11 @@ const divStyles: React.CSSProperties = {
 
 const columnStylesDown: React.CSSProperties = {
  display: 'flex',
- justifyContent: 'space-around'
+ justifyContent: 'space-between'
 };
 
 const logoStyles: React.CSSProperties = {
-  height: '60px',
+  height: '7rem',
 };
 
 const contactItemStyles: React.CSSProperties = {
