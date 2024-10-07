@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Box, Typography } from '@mui/material';
+import { Tabs, Tab, Box, TabContext, Typography } from '@mui/material';
 import image2 from '../assets/images/services/image2.jpg';
 import './OurServices.css';
 interface TabPanelProps {
@@ -31,23 +31,33 @@ const OurServices: React.FC = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
- 
+
   return (
     <Box sx={{ width: '100%', marginTop: '3rem' }}>
       <h2> Nuestros Servicios</h2>
-      <div className='circleDiv'>
+      {/* <div className='circleDiv'>
         <div className='circleServices'> Administrativos </div>
         <div  className='circleServices'> Legales </div>
         <div  className='circleServices'> Fiscal </div>
         <div  className='circleServices'> Contables </div>
         <div  className='circleServices'> Servicios de Contribución Social </div>
-      </div>
+      </div> */}
 
-      <div>
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab label="Administrativos" />
-          <Tab label="Legales" />
-          <Tab label="Fiscal" />
+      <Box className='tabsC' sx={{ width: '100%', }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="secondary"
+          textColor="inherit"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
+          <Tab wrapped label="Administrativos" />
+          <Tab wrapped label="Legales" />
+          <Tab wrapped label="Fiscales" />
+          <Tab wrapped label="Contables" />
+          <Tab wrapped label="Servicios de Contribución Social" />
         </Tabs>
 
         <TabPanel value={value} index={0}>
@@ -71,24 +81,68 @@ const OurServices: React.FC = () => {
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
-          <ul>
-            <li> Consultoría</li>
-            <li>      Elaboración de contratos</li>
-            <li>      Registro de Marca ante el IMPI</li>
-            <li>      Gestión de tramites federales, estatales y municipales</li>
-            <li>  Constitución empresarial</li>
-            <li>  Elaboración de poderes legales</li>
-          </ul>
+          <div className='corpSolutions'>
+            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <div className='text-corp'>
+              <ul>
+                <li> Consultoría</li>
+                <li>      Elaboración de contratos</li>
+                <li>      Registro de Marca ante el IMPI</li>
+                <li>      Gestión de tramites federales, estatales y municipales</li>
+                <li>  Constitución empresarial</li>
+                <li>  Elaboración de poderes legales</li>
+              </ul>
+            </div>
+
+          </div>
+
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <ul>
-            <li></li>
-          </ul>
-          <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+          <div className='corpSolutions'>
+            <div className='text-corp'>
+              <ul>
+                <li>   Consultoría</li>
+                <li> Calculo de impuestos</li>
+                <li> Presentación de Declaraciones Federales (Impuestos DIOT)</li>
+                <li> Presentación de Impuestos Estatales (Impuestos sobre la Nomina, Hospedaje, Libre Profesión e Impuesto Sobre Venta de Bebidas Alcohólicas). </li>
+                <li> Presentación de Declaraciones Anuales </li>
+                <li> Recuperación de Saldos a Favor </li>
+              </ul>
+            </div>
+
+            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+          </div>
         </TabPanel>
-      </div>
+
+        <TabPanel value={value} index={3}>
+          <div className='corpSolutions'>
+            <div className='text-corp'>
+              <ul>
+                <li>   Consultoría  </li>
+                <li> Procesos y registros contables </li>
+                <li> Administración de nómina </li>
+                <li> Generación de facturas </li>
+              </ul>
+            </div>
+
+            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+          </div>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <div className='corpSolutions'>
+            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <div className='text-corp'>
+              <ul>
+                <li> Registro y procedimientos de obra en SIROC </li>
+                <li>    Presentación de REPSE /ICSOE y SISUR  </li>
+                <li>  Calcullo de contribuciones de Seguridad Social (SIPARE)  </li>
+              </ul>
+            </div>
+
+          </div>
+        </TabPanel>
+      </Box>
     </Box>
   );
 };

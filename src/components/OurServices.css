@@ -1,24 +1,49 @@
-.circleDiv{
+.css-19kzrtu {
+  padding: 2rem 4rem;
+}
+
+.css-tm7wf0-MuiTabs-indicator{
+  background: #ff6100 !important;
+}
+.css-3up7ia-MuiButtonBase-root-MuiTab-root{
+  max-width: 300px !important;
+
+}
+.tabsC button:hover{
+  background: transparent !important;
+}
+.circleDiv {
   display: flex;
-  .circleServices{
+
+  .circleServices {
     background: blue;
     border-radius: 50%;
   }
 }
+
 .corpSolutions {
   display: flex;
   overflow: hidden;
   justify-content: space-around;
+
   .text-corp {
     font-size: 1.1rem;
-        background: white;
-        text-align: justify;
-        padding: 1rem;
-        align-content: center;
+    background: white;
+    text-align: justify;
+    padding: 1rem;
+    align-content: center;
   }
 
-  .image {
-    max-width: 50%;
-    max-height: 40%;
+
+
+  @media (max-width: 768px) {
+    display: grid;
+  }
+
+  @media (min-width: 768px) {
+    .image {
+      max-width: 50%;
+      max-height: 40%;
+    }
   }
 }
