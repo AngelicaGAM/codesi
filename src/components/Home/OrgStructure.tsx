@@ -14,7 +14,7 @@ interface BioProps {
 const OrgStructure: React.FC<BioProps> = ({ people }) => {
   return (
     <div style={{marginTop: '3rem'}}>
-      <h2 >Nuestro Equipo</h2>
+      <h2 className='servicesBottom'>Nuestro Equipo</h2>
       <div style={{ marginTop: '2rem', marginBottom: '3rem', display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '20px' }}>
 
         {people.map((person, index) => (

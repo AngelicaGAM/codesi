@@ -6,8 +6,11 @@ import OrgStructure from './components/Home/OrgStructure';
 import AboutUs from './components/Home/AboutUs';
 import ContactForm from './components/ContactForm';
 import OurServices from './components/OurServices';
-import MarketClients from './components/MarketClients';
+import DesignedServices from './components/DesignedServices';
 import LogoClients from './components/LogoClients';
+import WhatsAppButton from './components/WhatsAppButton';
+import FullScreenSlider from './components/Home/FullScreenSlider';
+
 import './App.css';
 
 import crystal from './assets/images/logosClientes/CRYSTAL.webp';
@@ -19,6 +22,7 @@ import santaClara from './assets/images/logosClientes/santaClara.jpg';
 import laCostena from './assets/images/logosClientes/laCostena.png';
 
 const App: React.FC = () => {
+
   const people = [
     { name: 'Erik Axel Rangel Alvarez', position: 'L.C', photoUrl: 'https://www.kevinashleyphotography.com/wp-content/uploads/2015/11/person(pp_w480_h610).jpg' },
     { name: 'Jonathan Oswaldo Álvarez Flores ', position: 'CP & L.D', photoUrl: 'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg' },
@@ -42,18 +46,19 @@ const App: React.FC = () => {
   ];
 
 
+
   return (
     <div className="App">
       <Header />
-      <Home />
+      <Home  />
+      {/* <FullScreenSlider /> */}
       <AboutUs />
-    
-      <OurServices title={title} content={content}/>
-      {/* <MarketClients /> */}
+      <DesignedServices   />
+      <OurServices title={title} content={content} />
       <OrgStructure people={people} />
-      
-       <LogoClients logos={logos} /> 
-       <ContactForm />
+      <LogoClients    logos={logos} />
+      <ContactForm />
+      <WhatsAppButton />
       <Footer />
     </div>
   );

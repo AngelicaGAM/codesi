@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, TabContext, Typography } from '@mui/material';
 import image2 from '../assets/images/services/image2.jpg';
+import image from '../assets/images/services/cel-1.jpg';
+import image1 from '../assets/images/services/cel-2.jpg';
+import image3 from '../assets/images/services/cel-3.jpg';
+import image4 from '../assets/images/services/cel-4.jpg';
+import image5 from '../assets/images/services/web-1.jpg';
+
+
+
 import './OurServices.css';
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -33,8 +41,8 @@ const OurServices: React.FC = () => {
   };
 
   return (
-    <Box sx={{ width: '100%', marginTop: '3rem' }}>
-      <h2> Nuestros Servicios</h2>
+    <Box id="serviciosRef" sx={{ width: '100%', marginTop: '3rem' }}>
+      <h2 className='servicesBottom'> Nuestros Servicios</h2>
       {/* <div className='circleDiv'>
         <div className='circleServices'> Administrativos </div>
         <div  className='circleServices'> Legales </div>
@@ -43,7 +51,7 @@ const OurServices: React.FC = () => {
         <div  className='circleServices'> Servicios de Contribución Social </div>
       </div> */}
 
-      <Box className='tabsC' sx={{ width: '100%', }}>
+      <Box className='tabsC' sx={{ width: '100%'}}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -52,11 +60,14 @@ const OurServices: React.FC = () => {
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
+          centered
+            role="navigation"
         >
           <Tab wrapped label="Administrativos" />
           <Tab wrapped label="Legales" />
-          <Tab wrapped label="Fiscales" />
           <Tab wrapped label="Contables" />
+          <Tab wrapped label="Fiscales" />
+
           <Tab wrapped label="Servicios de Contribución Social" />
         </Tabs>
 
@@ -75,14 +86,14 @@ const OurServices: React.FC = () => {
                 <li>  Constancias de Primeros Auxilios y Evacuación</li>
               </ul>
             </div>
-            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={image3} alt="Service 1" style={{ width: '100%' }} />
           </div>
 
         </TabPanel>
 
         <TabPanel value={value} index={1}>
           <div className='corpSolutions'>
-            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
             <div className='text-corp'>
               <ul>
                 <li> Consultoría</li>
@@ -102,23 +113,6 @@ const OurServices: React.FC = () => {
           <div className='corpSolutions'>
             <div className='text-corp'>
               <ul>
-                <li>   Consultoría</li>
-                <li> Calculo de impuestos</li>
-                <li> Presentación de Declaraciones Federales (Impuestos DIOT)</li>
-                <li> Presentación de Impuestos Estatales (Impuestos sobre la Nomina, Hospedaje, Libre Profesión e Impuesto Sobre Venta de Bebidas Alcohólicas). </li>
-                <li> Presentación de Declaraciones Anuales </li>
-                <li> Recuperación de Saldos a Favor </li>
-              </ul>
-            </div>
-
-            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
-          </div>
-        </TabPanel>
-
-        <TabPanel value={value} index={3}>
-          <div className='corpSolutions'>
-            <div className='text-corp'>
-              <ul>
                 <li>   Consultoría  </li>
                 <li> Procesos y registros contables </li>
                 <li> Administración de nómina </li>
@@ -126,12 +120,29 @@ const OurServices: React.FC = () => {
               </ul>
             </div>
 
-            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={image1} alt="Service 1" style={{ width: '100%' }} />
           </div>
         </TabPanel>
-        <TabPanel value={value} index={4}>
+        <TabPanel value={value} index={3}>
           <div className='corpSolutions'>
             <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <div className='text-corp'>
+              <ul>
+                <li>   Consultoría</li>
+                <li> Calculo de impuestos</li>
+                <li> Presentación de Declaraciones Federales <br></br> (Impuestos DIOT)</li>
+                <li> Presentación de Impuestos Estatales (Impuestos  <br></br>sobre la Nomina, Hospedaje, Libre Profesión e Impuesto <br></br> Sobre Venta de Bebidas Alcohólicas). </li>
+                <li> Presentación de Declaraciones Anuales </li>
+                <li> Recuperación de Saldos a Favor </li>
+              </ul>
+            </div>
+          </div>
+        </TabPanel>
+
+
+        <TabPanel value={value} index={4}>
+          <div className='corpSolutions'>
+
             <div className='text-corp'>
               <ul>
                 <li> Registro y procedimientos de obra en SIROC </li>
@@ -139,7 +150,7 @@ const OurServices: React.FC = () => {
                 <li>  Calcullo de contribuciones de Seguridad Social (SIPARE)  </li>
               </ul>
             </div>
-
+            <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
           </div>
         </TabPanel>
       </Box>

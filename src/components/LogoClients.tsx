@@ -77,11 +77,12 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
 
   return (
     <div style={{ width: "80%", margin: " 4rem auto 3rem auto ",  }}>
-      <h2 >Nuestros Clientes</h2>
+      <h2   className='servicesBottom' id="clientes"  >Nuestros Clientes</h2>
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div className="div-logo" key={index} style={cardStyle}>
             <img
+          
               src={logo}
               alt={`logo-cliente-${index}`}
               style={logoStyle} />

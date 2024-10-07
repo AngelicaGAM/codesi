@@ -27,7 +27,7 @@ const MarketClients: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2>Mercado y Clientes</h2>
+        <h2 className='servicesBottom'>Mercado y Clientes</h2>
         <p>Atendemos diversos segmentos del mercado, incluidos:</p>
       </motion.div>
 

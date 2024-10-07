@@ -16,7 +16,7 @@ const AboutUs: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-         <h2 style={{ color: '#0056b3', marginBottom: '1rem' }}>Nuestra Misión</h2>
+         <h2 className='servicesBottom'> Nuestra Misión</h2>
         <p style={{ maxWidth: '900px', margin: '20px auto', color: '#555' }}>
         Proporcionar servicios profesionales
 de alta calidad y soluciones

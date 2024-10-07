@@ -10,7 +10,6 @@ import { FaWhatsapp } from 'react-icons/fa';
 const Header: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isMenuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   const headerStyles: React.CSSProperties = {
@@ -32,10 +31,9 @@ const Header: React.FC = () => {
     <header style={headerStyles}>
       <div>
         <img
-          src={logo} // Reemplaza con la ruta de tu logo
+          src={logo} 
           alt="Logo"
           style={logoStyles}
-          
         />
       </div>
 
@@ -43,35 +41,38 @@ const Header: React.FC = () => {
       {!isMobile && (
         <nav style={navStyles}>
           <motion.a
-            href="#section1"
+            href="#serviciosRef"
             style={navLinkStyles}
             whileHover={{ scale: 1.1, color: '#17B009', borderBottom: '1px solid #17B009' }}
             whileFocus={{ scale: 1.1 }}
             initial="hidden"
             animate="visible"
             variants={menuVariants}
+            onClick={() => onScroll('servicios')}
           >
             Servicios
           </motion.a>
           <motion.a
-            href="#section2"
+            href="#clientes"
             style={navLinkStyles}
             whileHover={{ scale: 1.1 }}
             whileFocus={{ scale: 1.1 }}
             initial="hidden"
             animate="visible"
             variants={menuVariants}
+            onClick={() => onScroll('clientes')}
           >
            Clientes
           </motion.a>
           <motion.a
-            href="#section3"
+            href="#contacto"
             style={navLinkStyles}
             whileHover={{ scale: 1.1 }}
             whileFocus={{ scale: 1.1 }}
             initial="hidden"
             animate="visible"
             variants={menuVariants}
+            onClick={() => onScroll('contacto')}
           >
             Contacto
 

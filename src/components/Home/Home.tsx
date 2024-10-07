@@ -1,10 +1,10 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import image from '../../assets/images/home-mobile.jpg'
 import video from '../../assets/images/video/videoBanner.mp4'
 
 const Home: React.FC = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = true;
 
   return (
     <div style={containerStyles}>

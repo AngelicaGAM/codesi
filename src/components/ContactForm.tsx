@@ -32,7 +32,7 @@ const schema = Joi.object({
 
 const ContactForm: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: joiResolver(schema),
   });
 
@@ -50,10 +50,10 @@ const ContactForm: React.FC = () => {
     ).then(() => {
      
  
-
+      reset();
       Swal.fire({
-        title: " ¡Oh no!  ",
-        html: "¡Mensaje enviado correctamente!  Nuestro equipo se pondra en contacto contigo pronto.",
+        title: " ¡Recibimos tu mensaje!  ",
+        html: "Nuestro equipo se pondra en contacto contigo pronto.",
         showConfirmButton: false,
         icon: "success",
         showClass: {
@@ -91,11 +91,11 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div id="contacto" className="contact-container">
      
    
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-        <h2>Contáctanos</h2>
+        <h2 className='servicesBottom'>Contáctanos</h2>
         <div className='container-div'>
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
