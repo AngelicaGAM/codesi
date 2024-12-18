@@ -12,6 +12,12 @@ html {
   padding: 0;
 }
 
+.menu-header{
+  a{
+    color: rebeccapurple !important;
+  }
+ 
+}
 
 .header {
   display: flex;

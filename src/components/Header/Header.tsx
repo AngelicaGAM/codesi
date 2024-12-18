@@ -16,9 +16,10 @@ const Header: React.FC = () => {
     display: 'flex',
     justifyContent: isMobile ? 'space-between': 'space-around'  ,
     alignItems: 'center',
-    padding: '20px 20px',
+    padding: '0.5rem 1rem',
     backgroundColor: '#fff',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+    borderBottom: '2px solid orange'
   };
 
  
@@ -39,7 +40,7 @@ const Header: React.FC = () => {
 
       {/* Menú para Desktop */}
       {!isMobile && (
-        <nav style={navStyles}>
+        <nav className='menu-header'  style={navStyles}>
           <motion.a
             href="#serviciosRef"
             style={navLinkStyles}
@@ -136,7 +137,7 @@ const Header: React.FC = () => {
 
 
 const logoStyles: React.CSSProperties = {
-  height: '50px',
+  height: '55px',
   cursor: 'pointer',
 };
 

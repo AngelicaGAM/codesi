@@ -13,13 +13,15 @@ const services = [
 
 const DesignedServices: React.FC = () => {
   return (
-    <Box sx={{ textAlign: 'center', padding: '40px 20px' }}>
+    <Box 
+     
+     sx={{ textAlign: 'center', padding: '40px 20px' }}>
       <p className='titleServices'>    Nuestros  <h2> Servicios Profesionales </h2> están diseñados para: </p>
     
 
-      <Grid className='gridServices' container spacing={4} justifyContent="center">
+      <div className='gridServices'>
         {services.map((service, index) => (
-          <Grid item key={index}>
+          <div  key={index}>
             <Box
               sx={{
                 width: 170,
@@ -43,9 +45,9 @@ const DesignedServices: React.FC = () => {
                 {service.name}
               </Typography>
             </Box>
-          </Grid>
+          </div>
         ))}
-      </Grid>
+      </div>
     </Box>
   );
 };

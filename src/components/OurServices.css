@@ -1,17 +1,37 @@
-.css-19kzrtu {
-  padding: 2rem 4rem;
+.hover-image {
+  opacity: .7;
 }
 
-.css-tm7wf0-MuiTabs-indicator{
+.css-heg063-MuiTabs-flexContainer {
+  justify-content: center;
+}
+
+.css-19kzrtu {
+  padding: 1rem 2rem !important;
+
+}
+
+.corpSolutions {
+  max-height: 450px !important;
+}
+
+.css-tm7wf0-MuiTabs-indicator {
   background: #ff6100 !important;
 }
-.css-3up7ia-MuiButtonBase-root-MuiTab-root{
-  max-width: 300px !important;
+
+.css-3up7ia-MuiButtonBase-root-MuiTab-root {
+  max-width: 200px !important;
 
 }
-.tabsC button:hover{
+
+.css-ydmrf2 {
+  max-width: 50%;
+}
+
+.tabsC button:hover {
   background: transparent !important;
 }
+
 .circleDiv {
   display: flex;
 
@@ -21,10 +41,25 @@
   }
 }
 
+.css-9c0h7a-MuiButtonBase-root-MuiListItemButton-root:hover {
+  background: #13248f08;
+}
+
+.image {
+  object-fit: cover;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  height: 450px;
+}
+/* .image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+} */
+
 .corpSolutions {
   display: flex;
   overflow: hidden;
   justify-content: space-around;
+  align-items: center;
 
   .text-corp {
     font-size: 1.1rem;

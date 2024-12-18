@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       <div style={overlayStyles}>
         <div style={textstylesDiv}>
         <h1 style={textStyles}>CODESI</h1>
-        <p> CONSULTORES Y  EXPERTOS </p>
+        <p>  Somos un equipo de profesionales especializados en contabilidad, derecho y tecnología, dedicados a impulsar el crecimiento y éxito de tu empresa. </p>
         </div>
     
       </div>
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 const containerStyles: React.CSSProperties = {
   position: 'relative',
   width: '100%',
-  height: '60vh',
+  height: '80vh',
   overflow: 'hidden',
 };
 
@@ -56,20 +56,24 @@ const overlayStyles: React.CSSProperties = {
   height: '100%',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center',
-  background: 'rgba(0, 0, 0, 0.5)', // Capa de difuminado oscuro
+  alignItems: 'end',
 };
 
 const textstylesDiv: React.CSSProperties = {
     color: 'white', 
-    fontWeight: 'bold'
-}
+    fontWeight: 'bold',
+    display: 'grid',
+        gap: '2rem',
+        padding: '3rem',
+
+      }
 const textStyles: React.CSSProperties = {
   color: 'white',
   fontSize: '3rem',
   textAlign: 'center',
-  textShadow: '0px 4px 8px #152347', // Efecto difuminado en el texto
+  // textShadow: '0px 4px 8px #152347', // Efecto difuminado en el texto
 };
 
 
 export default Home;
+

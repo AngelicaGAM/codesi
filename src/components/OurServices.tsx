@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Box, TabContext, Typography } from '@mui/material';
+import { Tabs, Tab, Box, Typography } from '@mui/material';
 import image2 from '../assets/images/services/image2.jpg';
-import image from '../assets/images/services/cel-1.jpg';
 import image1 from '../assets/images/services/cel-2.jpg';
-import image3 from '../assets/images/services/cel-3.jpg';
-import image4 from '../assets/images/services/cel-4.jpg';
+import image3 from '../assets/images/admin.jpg';
 import image5 from '../assets/images/services/web-1.jpg';
-
-
-
+import BasicList from './BasicList'
 import './OurServices.css';
+
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -40,19 +38,58 @@ const OurServices: React.FC = () => {
     setValue(newValue);
   };
 
-  return (
-    <Box id="serviciosRef" sx={{ width: '100%', marginTop: '3rem' }}>
-      <h2 className='servicesBottom'> Nuestros Servicios</h2>
-      {/* <div className='circleDiv'>
-        <div className='circleServices'> Administrativos </div>
-        <div  className='circleServices'> Legales </div>
-        <div  className='circleServices'> Fiscal </div>
-        <div  className='circleServices'> Contables </div>
-        <div  className='circleServices'> Servicios de Contribución Social </div>
-      </div> */}
+  const servicioSocial = [
+    'Consultoría ',
+    'Administración de negocios',
+    'Elaboración de manuales de procesos',
+    'Elaboración de programas internos y planes de emergencia',
+    'Elaboración de Programas internos',
+    'Elaboración de Planes de Emergencia',
+    'Elaboración de Dictámenes Eléctricos',
+    'Constancias de Primeros Auxilios y Evacuación',
+  ]
 
-      <Box className='tabsC' sx={{ width: '100%'}}>
+  const legales = [
+    'Consultoría',
+    '     Elaboración de contratos',
+    '     Registro de Marca ante el IMPI',
+    '     Gestión de tramites federales, estatales y municipales',
+    ' Constitución empresarial',
+    ' Elaboración de poderes legales',
+  ]
+
+  const contables = [
+    '   Consultoría ',
+    ' Procesos y registros contables',
+    ' Administración de nómina',
+    ' Generación de facturas',
+  ]
+
+  const fiscales = [
+    '   Consultoría',
+    ' Calculo de impuestos',
+    ' Presentación de Declaraciones Federales (Impuestos DIOT)',
+    ' Presentación de Impuestos Estatales (Impuestos sobre la Nomina, Hospedaje, Libre Profesión e Impuesto. Sobre Venta de Bebidas Alcohólicas). ',
+    ' Presentación de Declaraciones Anuales ',
+    ' Recuperación de Saldos a Favor ',
+
+  ]
+
+  const consSocial = [
+    ' Registro y procedimientos de obra en SIROC ',
+    '    Presentación de REPSE /ICSOE y SISUR  ',
+    '  Calcullo de contribuciones de Seguridad Social (SIPARE)  ',
+
+  ]
+
+  return (
+    <Box  id="serviciosRef" sx={{ width: '100%', marginTop: '3rem' }}>
+      <h2  className='servicesBottom'> Nuestros Servicios</h2>
+
+
+      <Box className='tabsC' sx={{ width: '100%' }}>
         <Tabs
+          className='tabs-menu'
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
@@ -60,8 +97,8 @@ const OurServices: React.FC = () => {
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
-          centered
-            role="navigation"
+          
+          role="navigation"
         >
           <Tab wrapped label="Administrativos" />
           <Tab wrapped label="Legales" />
@@ -74,19 +111,9 @@ const OurServices: React.FC = () => {
         <TabPanel value={value} index={0}>
           <div className='corpSolutions'>
             <div className='text-corp'>
-              <ul>
-                <li>  Consultoría </li>
-                <li>  Administración de negocios</li>
-                <li>  Elaboración de manuales de procesos</li>
-                <li>  Elaboración de programas internos y planes de emergencia</li>
-                <li>  Elaboración de Programas internos</li>
-                <li>  Elaboración de Planes de Emergencia</li>
-                <li>  Elaboración de Dictámenes Eléctricos</li>
-                <li>  Elaboración de Dictámenes de Gas</li>
-                <li>  Constancias de Primeros Auxilios y Evacuación</li>
-              </ul>
+              <BasicList items={servicioSocial} />
             </div>
-            <img className='image' src={image3} alt="Service 1" style={{ width: '100%' }} />
+              <img className='image' src={image3} alt="Service 1" style={{ width: '100%' }} />
           </div>
 
         </TabPanel>
@@ -95,14 +122,7 @@ const OurServices: React.FC = () => {
           <div className='corpSolutions'>
             <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
             <div className='text-corp'>
-              <ul>
-                <li> Consultoría</li>
-                <li>      Elaboración de contratos</li>
-                <li>      Registro de Marca ante el IMPI</li>
-                <li>      Gestión de tramites federales, estatales y municipales</li>
-                <li>  Constitución empresarial</li>
-                <li>  Elaboración de poderes legales</li>
-              </ul>
+              <BasicList items={legales} />
             </div>
 
           </div>
@@ -112,12 +132,7 @@ const OurServices: React.FC = () => {
         <TabPanel value={value} index={2}>
           <div className='corpSolutions'>
             <div className='text-corp'>
-              <ul>
-                <li>   Consultoría  </li>
-                <li> Procesos y registros contables </li>
-                <li> Administración de nómina </li>
-                <li> Generación de facturas </li>
-              </ul>
+              <BasicList items={contables} />
             </div>
 
             <img className='image' src={image1} alt="Service 1" style={{ width: '100%' }} />
@@ -127,14 +142,7 @@ const OurServices: React.FC = () => {
           <div className='corpSolutions'>
             <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
             <div className='text-corp'>
-              <ul>
-                <li>   Consultoría</li>
-                <li> Calculo de impuestos</li>
-                <li> Presentación de Declaraciones Federales <br></br> (Impuestos DIOT)</li>
-                <li> Presentación de Impuestos Estatales (Impuestos  <br></br>sobre la Nomina, Hospedaje, Libre Profesión e Impuesto <br></br> Sobre Venta de Bebidas Alcohólicas). </li>
-                <li> Presentación de Declaraciones Anuales </li>
-                <li> Recuperación de Saldos a Favor </li>
-              </ul>
+              <BasicList items={fiscales} />
             </div>
           </div>
         </TabPanel>
@@ -144,11 +152,7 @@ const OurServices: React.FC = () => {
           <div className='corpSolutions'>
 
             <div className='text-corp'>
-              <ul>
-                <li> Registro y procedimientos de obra en SIROC </li>
-                <li>    Presentación de REPSE /ICSOE y SISUR  </li>
-                <li>  Calcullo de contribuciones de Seguridad Social (SIPARE)  </li>
-              </ul>
+              <BasicList items={consSocial} />
             </div>
             <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
           </div>
