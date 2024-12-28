@@ -9,7 +9,7 @@ import OurServices from './components/OurServices';
 import DesignedServices from './components/DesignedServices';
 import LogoClients from './components/LogoClients';
 import WhatsAppButton from './components/WhatsAppButton';
-import FullScreenSlider from './components/Home/FullScreenSlider';
+import PartnerCompany from './components/PartnerCompany';
 import './font.css';
 import './App.css';
 
@@ -25,8 +25,11 @@ import "aos/dist/aos.css";
 
 
 const App: React.FC = () => {
-  
-
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, [])
 
   const people = [
     { name: 'Erik Axel Rangel Alvarez', position: 'L.C', photoUrl: 'https://www.kevinashleyphotography.com/wp-content/uploads/2015/11/person(pp_w480_h610).jpg' },
@@ -55,15 +58,16 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Header />
-      <Home  />
-      
+      <Home />
 
-      {/* <FullScreenSlider /> */}
+
       <AboutUs />
-      <DesignedServices   />
+      <DesignedServices />
       <OurServices title={title} content={content} />
-      
-      <LogoClients    logos={logos} />
+
+    
+      <PartnerCompany />
+      <LogoClients logos={logos} />
       <ContactForm />
       <WhatsAppButton />
       <Footer />

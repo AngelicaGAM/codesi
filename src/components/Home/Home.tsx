@@ -1,9 +1,13 @@
 import React from 'react';
 // import { useMediaQuery } from 'react-responsive';
-import image from '../../assets/images/home-mobile.jpg'
+import image from '../../assets/images/services/image2.jpg'
 import video from '../../assets/images/video/videoBanner.mp4'
+import './home.css';
+
 
 const Home: React.FC = () => {
+
+
   const isMobile = true;
 
   return (
@@ -23,12 +27,17 @@ const Home: React.FC = () => {
           muted
         />
       )}
-      <div style={overlayStyles}>
+      <div className='divTextBanner' style={overlayStyles}>
         <div style={textstylesDiv}>
-        <h1 style={textStyles}>CODESI</h1>
-        <p>  Somos un equipo de profesionales especializados en contabilidad, derecho y tecnología, dedicados a impulsar el crecimiento y éxito de tu empresa. </p>
+          <div className='servicesBottomLast'>
+            <h1 style={textStyles}>CODESI</h1>
+
+          </div>
+
+          <p className='textP'>  Somos un equipo de profesionales especializados en contabilidad, derecho y tecnología, dedicados a impulsar el crecimiento y éxito de tu empresa. </p>
+
         </div>
-    
+
       </div>
     </div>
   );
@@ -57,16 +66,18 @@ const overlayStyles: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'end',
+  background: '#00000078'
 };
 
 const textstylesDiv: React.CSSProperties = {
-    color: 'white', 
-    fontWeight: 'bold',
-    display: 'grid',
-        gap: '2rem',
-        padding: '3rem',
+  color: 'white',
+  fontWeight: 'bold',
+  display: 'grid',
+  // gap: '1rem',
+  padding: '1rem 5rem',
+  textAlign: 'justify'
 
-      }
+}
 const textStyles: React.CSSProperties = {
   color: 'white',
   fontSize: '3rem',

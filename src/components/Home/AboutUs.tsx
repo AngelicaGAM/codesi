@@ -1,19 +1,19 @@
-import React from 'react';
 
 const AboutUs: React.FC = () => {
+
   return (
     <section
-  
+
       style={{
         padding: '50px 20px',
-        backgroundColor: '#f7f7f7',
+        backgroundColor: '#04154012',
         color: '#333',
-        textAlign: 'center',
+        overflow: "hidden",
+        textAlign: 'center'
       }}
     >
-
-      <h2  className='servicesBottom'> Nuestra Misión</h2>
-      <p style={{ maxWidth: '900px', margin: '20px auto', color: '#555' }}>
+      <h2 className='servicesBottom'> Nuestra Misión</h2>
+      <p style={{ maxWidth: '900px', margin: '20px auto', color: '#555', fontWeight:'600' }}>
         Proporcionar servicios profesionales
         de alta calidad y soluciones
         corporativas, brindando un soporte

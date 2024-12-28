@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
-import image2 from '../assets/images/services/image2.jpg';
-import image1 from '../assets/images/services/cel-2.jpg';
-import image3 from '../assets/images/admin.jpg';
+import socialContri from '../assets/images/services/clients.png';
+import image3 from '../assets/images/services/admin2.png';
 import image5 from '../assets/images/services/web-1.jpg';
+import contabilidadImg from '../assets/images/services/contabilidad.jpg'
+import taxes from '../assets/images/services/taxes.png';
 import BasicList from './BasicList'
 import './OurServices.css';
 
@@ -95,7 +96,7 @@ const OurServices: React.FC = () => {
           indicatorColor="secondary"
           textColor="inherit"
           variant="scrollable"
-          scrollButtons
+          scrollButtons={false}
           allowScrollButtonsMobile
           
           role="navigation"
@@ -135,12 +136,12 @@ const OurServices: React.FC = () => {
               <BasicList items={contables} />
             </div>
 
-            <img className='image' src={image1} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={contabilidadImg} alt="Service 1" style={{ width: '100%' }} />
           </div>
         </TabPanel>
         <TabPanel value={value} index={3}>
           <div className='corpSolutions'>
-            <img className='image' src={image2} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={taxes} alt="Service 1" style={{ width: '100%' }} />
             <div className='text-corp'>
               <BasicList items={fiscales} />
             </div>
@@ -154,7 +155,7 @@ const OurServices: React.FC = () => {
             <div className='text-corp'>
               <BasicList items={consSocial} />
             </div>
-            <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
+            <img className='image' src={socialContri} alt="Service 1" style={{ width: '100%' }} />
           </div>
         </TabPanel>
       </Box>

@@ -14,9 +14,10 @@ const services = [
 const DesignedServices: React.FC = () => {
   return (
     <Box 
-     
+    className='boxServices'
      sx={{ textAlign: 'center', padding: '40px 20px' }}>
-      <p className='titleServices'>    Nuestros  <h2> Servicios Profesionales </h2> están diseñados para: </p>
+      <p className='titleServices'>  
+        Nuestros  <h2> Servicios Profesionales </h2> están diseñados para: </p>
     
 
       <div className='gridServices'>
@@ -26,14 +27,14 @@ const DesignedServices: React.FC = () => {
               sx={{
                 width: 170,
                 height: 170,
-                backgroundColor: 'rgb(21, 35, 71)',
+                backgroundColor: '#051d40',
                 borderRadius: '50%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                boxShadow:'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px',
                 transition: 'transform 0.3s ease',
                 '&:hover': {
                   transform: 'scale(1.1)'

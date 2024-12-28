@@ -7,7 +7,9 @@
 
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -30,19 +32,25 @@ h2 {
   font-size: 2.3rem;
   color: #0a3a99;
   font-weight: bold;
+
   @media (max-width: 768px) {
     margin-bottom: 1rem !important;
   }
 }
 
-p.titleServices{
+p.titleServices {
   margin-bottom: 2rem;
 }
 
 
-.servicesBottom{
+.servicesBottom {
   margin-bottom: 2rem !important;
-  animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+  transition-behavior: normal, normal, normal, normal, normal;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0s;
+  transition-timing-function: ease, ease, ease, ease, ease;
+  transition-delay: 0s, 0s, 0s, 0s, 0s;
+
 }
 
 .titleServices {
@@ -50,4 +58,14 @@ p.titleServices{
   font-size: 1.7rem;
   margin-bottom: 2rem;
   font-weight: bold;
+  display: grid;
+}
+
+.gridServices {
+  display: flex;
+  justify-content: center;
+  /* grid-template-columns: 200px 200px 200px; */
+  gap: 3rem;
+  flex-wrap: wrap;
+
 }

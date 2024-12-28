@@ -78,7 +78,7 @@ const footerStyles: React.CSSProperties = {
   display: 'grid',
   justifyContent: 'normal',
   padding: '1rem 6rem',
-  backgroundColor: '#152347',
+  backgroundColor: 'rgb(4 21 64)',
   flexWrap: 'wrap',
 };
 

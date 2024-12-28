@@ -89,7 +89,8 @@
     width: 100%;
     max-width: 500px;
     padding: 12px 0;
-    background-color: #6c63ff;
+    /* background-color: #6c63ff; */
+    background-color: #041540;
     color: white;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
@@ -102,7 +103,7 @@
   }
   
   button:hover {
-    background-color: #5a54e0;
+    background-color: #041540;
   }
   
   button:active {

@@ -12,11 +12,24 @@ html {
   padding: 0;
 }
 
-.menu-header{
-  a{
-    color: rebeccapurple !important;
+.textWhats {
+  display: flex;
+  justify-content: space-around;
+  
+  align-items: center;
+  gap: 3rem;
+}
+
+.image-header {
+  height: 30px;
+  width: 40px;
+}
+
+.menu-header {
+  a {
+    color: #090554 !important;
   }
- 
+
 }
 
 .header {
@@ -135,13 +148,15 @@ html {
   }
 }
 
+/* .boxServices{
+  background: #090554;
+} */
 
 .titleServices {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: antiquewhite;
+  /* background: antiquewhite; */
   align-items: center;
-  
-}
 
+}

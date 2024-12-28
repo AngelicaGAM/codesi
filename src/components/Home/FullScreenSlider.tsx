@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Box, Typography, AppBar, Toolbar, Button } from '@mui/material';
+import { Box, Typography, AppBar } from '@mui/material';
 import image from '../../assets/images/banner1.jpg'
 import Header from '../Header/Header';
 

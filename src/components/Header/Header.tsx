@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/gcodesi.png';
+import './header.css';
 import { FaWhatsapp } from 'react-icons/fa';
 
 
@@ -14,15 +15,15 @@ const Header: React.FC = () => {
 
   const headerStyles: React.CSSProperties = {
     display: 'flex',
-    justifyContent: isMobile ? 'space-between': 'space-around'  ,
+    justifyContent: isMobile ? 'space-between' : 'space-around',
     alignItems: 'center',
     padding: '0.5rem 1rem',
     backgroundColor: '#fff',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-    borderBottom: '2px solid orange'
+    borderBottom: '2px solid #ff6100'
   };
 
- 
+
   const menuVariants = {
     hidden: { opacity: 0, y: -10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
@@ -32,75 +33,72 @@ const Header: React.FC = () => {
     <header style={headerStyles}>
       <div>
         <img
-          src={logo} 
+          src={logo}
           alt="Logo"
           style={logoStyles}
         />
       </div>
+      <div 
+      className='textWhats'>
+        {!isMobile && (
+          <nav className='menu-header' style={navStyles}>
+            <motion.a
+              href="#serviciosRef"
+              style={navLinkStyles}
+              whileHover={{ scale: 1.1 }}
+              initial="hidden"
+              animate="visible"
+              variants={menuVariants}
+              onClick={() => onScroll('servicios')}
+            >
+              Servicios
+            </motion.a>
+            <motion.a
+              href="#clientes"
+              style={navLinkStyles}
+               whileHover={{ scale: 1.1 }}
+              initial="hidden"
+              animate="visible"
+              variants={menuVariants}
+              onClick={() => onScroll('clientes')}
+            >
+              Clientes
+            </motion.a>
+            <motion.a
+              href="#contacto"
+              style={navLinkStyles}
+               whileHover={{ scale: 1.1 }}
+              initial="hidden"
+              animate="visible"
+              variants={menuVariants}
+              onClick={() => onScroll('contacto')}
+            >
+              Contacto
 
-      {/* Menú para Desktop */}
-      {!isMobile && (
-        <nav className='menu-header'  style={navStyles}>
+            </motion.a>
+          </nav>
+        )}
+
+        {/* Botón de WhatsApp (solo en Desktop) */}
+        {!isMobile && (
           <motion.a
-            href="#serviciosRef"
-            style={navLinkStyles}
-            whileHover={{ scale: 1.1, color: '#17B009', borderBottom: '1px solid #17B009' }}
-            whileFocus={{ scale: 1.1 }}
-            initial="hidden"
-            animate="visible"
-            variants={menuVariants}
-            onClick={() => onScroll('servicios')}
-          >
-            Servicios
-          </motion.a>
-          <motion.a
-            href="#clientes"
-            style={navLinkStyles}
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={buttonStyles}
             whileHover={{ scale: 1.1 }}
-            whileFocus={{ scale: 1.1 }}
-            initial="hidden"
-            animate="visible"
-            variants={menuVariants}
-            onClick={() => onScroll('clientes')}
+
+            transition={{
+              ease: "linear",
+              duration: 2,
+              x: { duration: 1 }
+            }}
           >
-           Clientes
-          </motion.a>
-          <motion.a
-            href="#contacto"
-            style={navLinkStyles}
-            whileHover={{ scale: 1.1 }}
-            whileFocus={{ scale: 1.1 }}
-            initial="hidden"
-            animate="visible"
-            variants={menuVariants}
-            onClick={() => onScroll('contacto')}
-          >
-            Contacto
+            <FaWhatsapp style={iconStyles} />
 
           </motion.a>
-        </nav>
-      )}
-
-      {/* Botón de WhatsApp (solo en Desktop) */}
-      {!isMobile && (
-        <motion.a
-          href="https://wa.me/1234567890"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={buttonStyles}
-          whileHover={{ scale: 1.1 }}
-          
-          transition={{
-            ease: "linear",
-            duration: 2,
-            x: { duration: 1 }
-          }}
-        >
-        <FaWhatsapp style={iconStyles} />
-     
-        </motion.a>
-      )}
-
+        )}
+      </div>
       {/* Menú Sandwich para Mobile */}
       {isMobile && (
         <>
@@ -129,7 +127,7 @@ const Header: React.FC = () => {
       )}
     </header>
   );
-  
+
 
 };
 
@@ -137,7 +135,8 @@ const Header: React.FC = () => {
 
 
 const logoStyles: React.CSSProperties = {
-  height: '55px',
+  height: '80px',
+  width: '100px',
   cursor: 'pointer',
 };
 
@@ -148,10 +147,11 @@ const navStyles: React.CSSProperties = {
 
 const navLinkStyles: React.CSSProperties = {
   textDecoration: 'none',
-  color: '#737373', 
-  fontWeight: 500,
+  color: '#090554 !important',
+  fontWeight: 'bold',
   cursor: 'pointer',
   position: 'relative',
+  fontSize: '1rem'
 };
 
 
@@ -190,13 +190,13 @@ const mobileMenuStyles: React.CSSProperties = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '3rem',
+  gap: '4rem',
   marginTop: '20px',
 };
 
 const mobileNavLinkStyles: React.CSSProperties = {
   textDecoration: 'none',
-  color: '#737373', 
+  color: '#737373',
   fontWeight: 500,
   fontSize: '24px',
 };
