@@ -1,22 +1,34 @@
-import image1 from '../assets/images/empresas/cra.png';
-import image2 from '../assets/images/empresas/elephant.png';
-import image3 from '../assets/images/empresas/kasterz.png';
-import image4 from '../assets/images/empresas/logo_liz.jpg';
-import image5 from '../assets/images/empresas/tyrion.png';
-import image6 from '../assets/images/empresas/uno.png';
+
 import './PartnerCompany.css';
+
+const BASE_URL = '/images';
+
 
 const PartnerCompany: React.FC = () => {
     return (
         <section className='PartnerCompany'>
             <h2 className='title'>Empresas de Grupo CODESI</h2>
             <div className='imagesdiv'>
-                <img src={image1} />
-                <img src={image2} />
-                <img src={image3} />
-                <img src={image4} />
-                <img src={image5} />
-                <img src={image6} />
+                <a href="https://www.instagram.com/tyrionburgers?igsh=emF3ZndvOXV6MnNy"
+                   target="_blank">
+                    <img src={`${BASE_URL}/empresas/tyrion.png`} />
+                </a>
+
+                <img src={`${BASE_URL}/empresas/logo_liz.jpg`} />
+
+                <a href='https://kasterz.com' 
+                   target="_blank">
+                    <img src={`${BASE_URL}/empresas/kasterz.png`} />
+                </a>
+                <img src={`${BASE_URL}/empresas/uno.png`} />
+
+                <img src={`${BASE_URL}/empresas/cra.png`} />
+
+                <a href='https://www.instagram.com/elephant_cun?igsh=MTN3aTZiOGJod3NkNA=='
+                   target="_blank">
+                    <img src={`${BASE_URL}/empresas/elephant.png`} />
+                </a>
+
             </div>
 
         </section>

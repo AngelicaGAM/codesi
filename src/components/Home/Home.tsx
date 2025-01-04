@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useMediaQuery } from 'react-responsive';
-import image from '../../assets/images/services/image2.jpg'
-import video from '../../assets/images/video/videoBanner.mp4'
+import image from '/images/services/image2.jpg'
+import video from '/images/video/videoBanner.mp4'
 import './home.css';
 
 

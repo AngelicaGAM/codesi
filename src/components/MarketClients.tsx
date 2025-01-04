@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './MarketClients.css';
 
-import aviacion from '../assets/images/clientes/aviacion.jpg'
-import bienes from '../assets/images/clientes/bienesRaices.jpg'
-import hotels from '../assets/images/clientes/hotels.jpg'
-import concierge from '../assets/images/clientes/concierge.jpg'
-import finanzas from '../assets/images/clientes/finanzas.jpg'
-// import finanzas from '../assets/images/clientes/concierge.jpg'
+import aviacion from '/images/clientes/aviacion.jpg'
+import bienes from '/images/clientes/bienesRaices.jpg'
+import hotels from '/images/clientes/hotels.jpg'
+import concierge from '/images/clientes/concierge.jpg'
+import finanzas from '/images/clientes/finanzas.jpg'
+// import finanzas from '/images/clientes/concierge.jpg'
 
 const MarketClients: React.FC = () => {
   const services = [

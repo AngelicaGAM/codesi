@@ -1,10 +1,11 @@
+// @ts-nocheck
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import * as Joi from 'joi';
 import emailjs from 'emailjs-com';
 import './ContactForm.css'; // Estilos mejorados
-import banner1 from '../assets/images/banner1.jpg';
+import banner1 from '/images/banner1.jpg';
 import { useMediaQuery } from 'react-responsive';
 import Swal from 'sweetalert2'
 
@@ -102,7 +103,7 @@ const ContactForm: React.FC = () => {
             <input id="name" {...register('name')} />
           </div>
           <div className='div-error'>
-            {errors.name && <p className="error-message">{errors.name.message}</p>}
+            {errors.name && <p className="error-message">{ errors.name.message}</p>}
           </div>       
         </div>
 

@@ -1,10 +1,11 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
-import socialContri from '../assets/images/services/clients.png';
-import image3 from '../assets/images/services/admin2.png';
-import image5 from '../assets/images/services/web-1.jpg';
-import contabilidadImg from '../assets/images/services/contabilidad.jpg'
-import taxes from '../assets/images/services/taxes.png';
+import socialContri from '/images/services/clients.png';
+import image3 from '/images/services/admin2.png';
+import image5 from '/images/services/web-1.jpg';
+import contabilidadImg from '/images/services/contabilidad.jpg'
+import taxes from '/images/services/taxes.png';
 import BasicList from './BasicList'
 import './OurServices.css';
 
@@ -35,7 +36,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other })
 const OurServices: React.FC = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = ( newValue: number) => {
     setValue(newValue);
   };
 

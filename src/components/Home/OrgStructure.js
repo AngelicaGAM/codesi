@@ -1,20 +1,16 @@
 // import React from 'react';
 // import { motion } from 'framer-motion';
-
+export {};
 // interface Person {
 //   name: string;
 //   position: string;
 //   photoUrl: string;
 // }
-
-
-
 // const OrgStructure: React.FC<BioProps> = ({ people }) => {
 //   return (
 //     <div style={{marginTop: '3rem'}}>
 //       <h2 className='servicesBottom'>Nuestro Equipo</h2>
 //       <div style={{ marginTop: '2rem', marginBottom: '3rem', display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '20px' }}>
-
 //         {people.map((person, index) => (
 //           <motion.div
 //             key={index}
@@ -48,8 +44,6 @@
 //         ))}
 //       </div>
 //     </div>
-
 //   );
 // };
-
 // export default OrgStructure;

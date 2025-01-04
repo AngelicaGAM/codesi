@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import {   FaBusinessTime, FaProjectDiagram, FaRegLightbulb } from 'react-icons/fa';
 import { BiWorld } from "react-icons/bi";
 

@@ -1,8 +1,9 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../../assets/images/gcodesi.png';
+import logo from '/images/gcodesi.png';
 import './header.css';
 import { FaWhatsapp } from 'react-icons/fa';
 

@@ -16,3 +16,23 @@
     width: 50%;
     display: flow;
 }
+@media (max-width: 768px) {
+    .PartnerCompany{
+        display: grid;
+        justify-content: center;
+        margin-top: 3rem;
+        .title{
+            align-content: center;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+        }
+    }
+    
+    .imagesdiv{
+        width: 100%;
+        display: flow;
+    } 
+}

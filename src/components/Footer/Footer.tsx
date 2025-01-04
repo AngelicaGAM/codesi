@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import logoFooter from '../../assets/images/logoFooter.png'
+import logoFooter from '/images/logoFooter.png'
 import './footer.css';
 
 

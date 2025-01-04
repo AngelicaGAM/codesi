@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { Box, Typography, AppBar } from '@mui/material';
-import image from '../../assets/images/banner1.jpg'
+import image from '/images/banner1.jpg'
 import Header from '../Header/Header';
 
 const images = [

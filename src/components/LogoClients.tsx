@@ -68,12 +68,12 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
     objectFit: "contain", // Asegura que la imagen se ajuste sin distorsionar
   };
 
-  const titleStyle: React.CSSProperties = {
-    textAlign: "center", // Centramos el texto
-    marginBottom: "20px", // Margen inferior para separar del contenido
-    fontSize: "24px", // Tamaño de fuente para el título
-    fontWeight: "bold", // Negrita para el título
-  };
+  // const titleStyle: React.CSSProperties = {
+  //   textAlign: "center", // Centramos el texto
+  //   marginBottom: "20px", // Margen inferior para separar del contenido
+  //   fontSize: "24px", // Tamaño de fuente para el título
+  //   fontWeight: "bold", // Negrita para el título
+  // };
 
   return (
     <div style={{ width: "80%", margin: " 4rem auto 3rem auto ",  }}>
