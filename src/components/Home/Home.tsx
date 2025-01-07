@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   const isMobile = true;
 
   return (
-    <div style={containerStyles}>
+    <div className='homeWrapper' style={containerStyles}>
       {isMobile ? (
         <img
           src={image}
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         />
       )}
       <div className='divTextBanner' style={overlayStyles}>
-        <div style={textstylesDiv}>
+        <div className='wrapperText' style={textstylesDiv}>
           <div className='servicesBottomLast'>
             <h1 style={textStyles}>CODESI</h1>
 

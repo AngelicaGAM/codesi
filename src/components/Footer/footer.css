@@ -9,7 +9,9 @@
 }
 
 .footer {
-
+    font-weight: bold;
+    font-size: 16px;
+    font-family: DM Sans !important;
     @media (max-width: 768px) {
         padding: 3rem 0rem !important;
         img {

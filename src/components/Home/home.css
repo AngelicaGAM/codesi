@@ -1,63 +1,108 @@
 /* src/Home.css */
 .home {
-    width: 100%;
-    background: blue;
-  }
-  
-  section {
-    padding: 20px;
-    text-align: center;
-  }
-  
-
-  
-.divMision {
-  /* display:inline-block;
-  overflow:hidden;
-  white-space:nowrap; */
+  width: 100%;
+  background: blue;
 }
 
-.divTextBanner {    
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+.divTextBanner {
   animation: showup 17s infinite;
 }
 
 .servicesBottomLast {
-  width:0px;
+  width: 0px;
   /* animation: showup 23s infinite; */
   /* animation: reveal 10s infinite;
    */
-   /* animation: showup 12s infinite; */
+  /* animation: showup 12s infinite; */
 }
 
-.servicesBottomLast  {
+.servicesBottomLast {
   /* margin-left:-355px; */
   animation: slidein 12s infinite;
 }
 
-.textP{
+.textP {
   /* animation: showup 12s infinite; */
   font-size: 19px;
 }
 
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
+@media (max-width: 768px) {
+  .homeWrapper {
+    height: 75vh !important;
+  }
+  .wrapperText{
+    padding: 5rem !important;
+  }
 }
 
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
+@media (min-width: 768px) {
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slidein {
+    0% {
+      margin-left: -800px;
+    }
+  
+    20% {
+      margin-left: -800px;
+    }
+  
+    35% {
+      margin-left: 0px;
+    }
+  
+    100% {
+      margin-left: 0px;
+    }
+  }
+  
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      width: 0px;
+    }
+  
+    20% {
+      opacity: 1;
+      width: 0px;
+    }
+  
+    30% {
+      width: 355px;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      width: 355px;
+    }
+  }
 }
-
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:355px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:355px;}
-}
-

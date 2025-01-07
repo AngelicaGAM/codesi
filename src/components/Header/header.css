@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
 }
+.divmobile{
+  display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+}
 
 body,
 html {
@@ -40,7 +46,6 @@ html {
   padding: 5px 20px;
   background-color: #333;
   color: transparent;
-  position: sticky;
   top: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;

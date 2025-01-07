@@ -15,7 +15,7 @@ const BasicList: React.FC<BasicListProps> = ({items }) => {
         <List>
           {items && items.map((item) => {
             return (  
-            <ListItem disablePadding>
+            <ListItem key={item} disablePadding>
               <ListItemButton>
                 <ListItemText primary={item} />
               </ListItemButton>

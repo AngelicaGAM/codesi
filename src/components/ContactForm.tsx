@@ -7,6 +7,10 @@ import emailjs from 'emailjs-com';
 import './ContactForm.css'; // Estilos mejorados
 import banner1 from '/images/banner1.jpg';
 import { useMediaQuery } from 'react-responsive';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField'
 import Swal from 'sweetalert2'
 
 const schema = Joi.object({
@@ -49,8 +53,8 @@ const ContactForm: React.FC = () => {
       },
       '4Ip8_xEQ11eTtJ6oO' // USER_ID
     ).then(() => {
-     
- 
+
+
       reset();
       Swal.fire({
         title: " ¡Recibimos tu mensaje!  ",
@@ -62,7 +66,7 @@ const ContactForm: React.FC = () => {
           backdrop: 'swal2-backdrop-show',
           icon: 'swal2-icon-show'
         },
-        hideClass:{
+        hideClass: {
           popup: 'swal2-hide',
           backdrop: 'swal2-backdrop-hide',
           icon: 'swal2-icon-hide'
@@ -81,20 +85,30 @@ const ContactForm: React.FC = () => {
           backdrop: 'swal2-backdrop-show',
           icon: 'swal2-icon-show'
         },
-        hideClass:{
+        hideClass: {
           popup: 'swal2-hide',
           backdrop: 'swal2-backdrop-hide',
           icon: 'swal2-icon-hide'
         }
       });
-      
+
     });
   };
 
+  const services = [
+    'Contable',
+    'Administrativo',
+    'Legal',
+    'Fiscal',
+    'Contribución social',
+    'Otro'
+  ];
+
+
   return (
     <div id="contacto" className="contact-container">
-     
-   
+
+
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
         <h2 className='servicesBottom'>Contáctanos</h2>
         <div className='container-div'>
@@ -103,8 +117,8 @@ const ContactForm: React.FC = () => {
             <input id="name" {...register('name')} />
           </div>
           <div className='div-error'>
-            {errors.name && <p className="error-message">{ errors.name.message}</p>}
-          </div>       
+            {errors.name && <p className="error-message">{errors.name.message}</p>}
+          </div>
         </div>
 
         <div className='container-div'>
@@ -114,7 +128,7 @@ const ContactForm: React.FC = () => {
           </div>
           <div className='div-error'>
             {errors.email && <p className="error-message">{errors.email.message}</p>}
-          </div>  
+          </div>
         </div>
 
         <div className='container-div'>
@@ -128,12 +142,35 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div className='container-div'>
+
+          {/* <div className="form-group">
+            <label htmlFor="typeService">Tipo de servicio</label>
+          
+            <TextField
+            className='TextFieldSele'
+              select
+              variant="outlined"
+              fullWidth
+              // sx={{ width: "100%" }} // Opcional, fullWidth ya asegura que se ajuste
+            >
+              {services.map((item) => (
+                <MenuItem key={item} value={item}>
+                  {item}
+                </MenuItem>
+              ))}
+            </TextField>
+          </div> */}
+          <div className='div-typeService'>
+            {errors.typeService && <p className="error-message">{errors.typeService.message}</p>}
+          </div>
+        </div>
+        <div className='container-div'>
           <div className="form-group">
             <label htmlFor="message">Mensaje</label>
             <textarea id="message" {...register('message')} />
           </div>
           <div className='div-error'>
-          {errors.message && <p className="error-message">{errors.message.message}</p>}
+            {errors.message && <p className="error-message">{errors.message.message}</p>}
           </div>
         </div>
 
@@ -141,11 +178,11 @@ const ContactForm: React.FC = () => {
         <button type="submit">Enviar Mensaje</button>
       </form>
 
-      { !isMobile &&  
-      <div className="contact-banner">
-        <img src={banner1} alt="Banner" /> {/* Reemplaza con la URL de tu imagen */}
-      </div>}
-     
+      {!isMobile &&
+        <div className="contact-banner">
+          <img src={banner1} alt="Banner" /> {/* Reemplaza con la URL de tu imagen */}
+        </div>}
+
     </div>
   );
 };

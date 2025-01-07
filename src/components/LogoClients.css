@@ -3,3 +3,11 @@
     justify-content: center !important;
 }
 
+
+.imgClientes{
+    /* background: red; */
+    width: 80% !important;
+    height: 110px !important;
+    object-fit: contain !important; 
+    padding-bottom: 4px;
+}

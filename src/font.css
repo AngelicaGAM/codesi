@@ -3,18 +3,18 @@
     src: url('/src/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   }
   
-  @font-face {
-    font-family: 'Flow Circular';
-    src: url('/src/assets/fonts/Flow_Circular/FlowCircular-Regular.ttf') format('truetype');
-    font-style: normal;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+   
+    .footerLocation{
+      display: grid !important
+;
+        grid-template-columns: repeat(2, 1fr) !important;
+     /* width: 50% !important; */
+    }
+    .textMaps{
+      max-width: 80% !important;
+    }
+  
   }
   
-  @font-face {
-    font-family: 'Circular std';
-    src: url('/src/assets/fonts/CircularStd/CircularStd-Bold.otf') format('truetype'),
-      url('/src/assets/fonts/CircularStd/CircularStd-Black.otf') format('truetype'),
-      url('/src/assets/fonts/CircularStd/CircularStd-Light.otf') format('truetype'),
-      url('/src/assets/fonts/CircularStd/CircularStd-Medium.otf') format('truetype');
-    font-style: normal;
-    /* Cambia según el estilo */
-  }

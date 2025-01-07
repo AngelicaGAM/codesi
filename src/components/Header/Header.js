@@ -15,20 +15,32 @@ const Header = () => {
         display: 'flex',
         justifyContent: isMobile ? 'space-between' : 'space-around',
         alignItems: 'center',
-        padding: '0.5rem 1rem',
+        padding: '0.5rem 2rem',
         backgroundColor: '#fff',
         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-        borderBottom: '2px solid #ff6100'
+        borderBottom: '2px solid #ff6100',
     };
     const menuVariants = {
         hidden: { opacity: 0, y: -10 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
     };
-    return (_jsxs("header", { style: headerStyles, children: [_jsx("div", { children: _jsx("img", { src: logo, alt: "Logo", style: logoStyles }) }), _jsxs("div", { className: 'textWhats', children: [!isMobile && (_jsxs("nav", { className: 'menu-header', style: navStyles, children: [_jsx(motion.a, { href: "#serviciosRef", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('servicios'), children: "Servicios" }), _jsx(motion.a, { href: "#clientes", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('clientes'), children: "Clientes" }), _jsx(motion.a, { href: "#contacto", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('contacto'), children: "Contacto" })] })), !isMobile && (_jsx(motion.a, { href: "https://wa.me/1234567890", target: "_blank", rel: "noopener noreferrer", style: buttonStyles, whileHover: { scale: 1.1 }, transition: {
+    const mobileClick = (text) => {
+        toggleMenu();
+    };
+    const scrollToSection = (id) => {
+        toggleMenu();
+        setTimeout(() => {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }, 300);
+    };
+    return (_jsxs("header", { style: headerStyles, children: [_jsx("div", { children: _jsx("img", { src: logo, alt: "Logo", style: logoStyles }) }), _jsxs("div", { className: 'textWhats', children: [!isMobile && (_jsxs("nav", { className: 'menu-header', style: navStyles, children: [_jsx(motion.a, { href: "#servicios", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('servicios'), children: "Servicios" }), _jsx(motion.a, { href: "#clientes", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('clientes'), children: "Clientes" }), _jsx(motion.a, { href: "#contacto", style: navLinkStyles, whileHover: { scale: 1.1 }, initial: "hidden", animate: "visible", variants: menuVariants, onClick: () => onScroll('contacto'), children: "Contacto" })] })), !isMobile && (_jsx(motion.a, { href: "https://wa.me/1234567890", target: "_blank", rel: "noopener noreferrer", style: buttonStyles, whileHover: { scale: 1.1 }, transition: {
                             ease: "linear",
                             duration: 2,
                             x: { duration: 1 }
-                        }, children: _jsx(FaWhatsapp, { style: iconStyles }) }))] }), isMobile && (_jsxs(_Fragment, { children: [_jsx("div", { style: menuIconStyles, onClick: toggleMenu, children: _jsx(FiMenu, { size: 24 }) }), isMenuOpen && (_jsxs(motion.div, { initial: { x: '-100%' }, animate: { x: 0 }, transition: { duration: 0.3 }, style: mobileMenuContainerStyles, children: [_jsx("div", { style: menuCloseIconStyles, onClick: toggleMenu, children: _jsx(FiX, { size: 24 }) }), _jsxs("nav", { style: mobileMenuStyles, children: [_jsx("a", { href: "#section1", style: mobileNavLinkStyles, onClick: toggleMenu, children: "Secci\u00F3n 1" }), _jsx("a", { href: "#section2", style: mobileNavLinkStyles, onClick: toggleMenu, children: "Secci\u00F3n 2" }), _jsx("a", { href: "#section3", style: mobileNavLinkStyles, onClick: toggleMenu, children: "Secci\u00F3n 3" })] })] }))] }))] }));
+                        }, children: _jsx(FaWhatsapp, { style: iconStyles }) }))] }), isMobile && (_jsxs(_Fragment, { children: [_jsx("div", { style: menuIconStyles, onClick: toggleMenu, children: _jsx(FiMenu, { size: 24 }) }), isMenuOpen && (_jsxs(motion.div, { initial: { x: '-100%' }, animate: { x: 0 }, transition: { duration: 0.3 }, style: mobileMenuContainerStyles, children: [_jsxs("div", { className: 'divmobile', children: [_jsx("img", { src: logo, alt: "Logo", style: logoStyles }), _jsx("div", { style: menuCloseIconStyles, onClick: toggleMenu, children: _jsx(FiX, { size: 34 }) })] }), _jsxs("nav", { style: mobileMenuStyles, children: [_jsx("div", { style: mobileNavLinkStyles, onClick: () => scrollToSection('servicios'), children: "Servicios" }), _jsx("div", { style: mobileNavLinkStyles, onClick: () => scrollToSection('clientes'), children: "Clientes" }), _jsx("div", { style: mobileNavLinkStyles, onClick: () => scrollToSection('contacto'), children: "Contacto" })] })] }))] }))] }));
 };
 // Estilos en línea
 const logoStyles = {
@@ -58,7 +70,7 @@ const mobileMenuContainerStyles = {
     top: 0,
     left: 0,
     width: '100%',
-    height: '50vh',
+    height: '100vh',
     backgroundColor: '#fff',
     zIndex: 1000,
     display: 'flex',
@@ -71,6 +83,7 @@ const menuCloseIconStyles = {
     alignSelf: 'flex-end',
     padding: '10px',
     cursor: 'pointer',
+    color: 'rgb(4, 21, 64)',
 };
 const mobileMenuStyles = {
     display: 'flex',
@@ -78,7 +91,8 @@ const mobileMenuStyles = {
     justifyContent: 'center',
     alignItems: 'center',
     gap: '4rem',
-    marginTop: '20px',
+    marginTop: '40px',
+    width: '100%'
 };
 const mobileNavLinkStyles = {
     textDecoration: 'none',

@@ -13,9 +13,9 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 4000,
     slidesToShow: 4, 
-    slidesToScroll: 1, // Desplazarse de una en una
+    slidesToScroll: 3, // Desplazarse de una en una
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
@@ -58,7 +58,6 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
     margin: "10px auto", // Centrando las cards con margen
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)", // Sombra de la card
     borderRadius: "8px", // Borde redondeado
-    backgroundColor: "red", // Fondo blanco para la card
     padding: "10px",
   };
 
@@ -76,13 +75,16 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
   // };
 
   return (
-    <div style={{ width: "80%", margin: " 4rem auto 3rem auto ",  }}>
-      <h2   className='servicesBottom' id="clientes"  >Nuestros Clientes</h2>
+    <div id="clientes" style={{ width: "80%", margin: " 4rem auto 3rem auto ",  }}>
+      <p className='titleServices'>  
+      Algunos de  
+      <h2   className='servicesBottom'  > Nuestros Clientes</h2>
+      </p>
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div className="div-logo" key={index} style={cardStyle}>
             <img
-          
+              className="imgClientes"
               src={logo}
               alt={`logo-cliente-${index}`}
               style={logoStyle} />

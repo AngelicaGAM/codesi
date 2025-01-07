@@ -22,7 +22,13 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other })
       role="tabpanel"
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
+      style={{ transition: "opacity 0.5s ease-in-out" }}
       {...other}
+      style={{
+        opacity: value === index ? 1 : 0, // Transición de opacidad
+        transform: value === index ? "translateX(0)" : "translateX(-100%)", // Desplazamiento hacia la izquierda
+        transition: "opacity 0.5s ease, transform 0.5s ease", // Transición de opacidad y desplazamiento
+      }}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -36,15 +42,15 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other })
 const OurServices: React.FC = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = ( newValue: number) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
 
   const servicioSocial = [
     'Consultoría ',
     'Administración de negocios',
     'Elaboración de manuales de procesos',
-    'Elaboración de programas internos y planes de emergencia',
     'Elaboración de Programas internos',
     'Elaboración de Planes de Emergencia',
     'Elaboración de Dictámenes Eléctricos',
@@ -85,29 +91,37 @@ const OurServices: React.FC = () => {
   ]
 
   return (
-    <Box  id="serviciosRef" sx={{ width: '100%', marginTop: '3rem' }}>
-      <h2  className='servicesBottom'> Nuestros Servicios</h2>
+    <Box id="servicios" sx={{ width: '100%', marginTop: '3rem' }}>
+      <h2 className='servicesBottom'> Nuestros Servicios</h2>
 
 
-      <Box className='tabsC' sx={{ width: '100%' }}>
+      <Box className='tabsC'
+        sx={{
+          width: "100%",
+          overflowX: "auto",
+          WebkitOverflowScrolling: "touch",
+        }}>
         <Tabs
           className='tabs-menu'
           value={value}
           onChange={handleChange}
-          indicatorColor="secondary"
-          textColor="inherit"
-          variant="scrollable"
-          scrollButtons={false}
-          allowScrollButtonsMobile
-          
-          role="navigation"
+          variant="scrollable" // Habilita desplazamiento horizontal
+          scrollButtons="auto" // Botones visibles si el scroll es necesario
+          allowScrollButtonsMobile // Activa botones en dispositivos móviles
+          sx={{
+            borderLeft: 1,
+            "& .MuiTabs-scrollButtons": {
+              "&.Mui-disabled": { opacity: 0.3 }, // Mejora la visibilidad de los botones
+            },
+          }}
         >
-          <Tab wrapped label="Administrativos" />
-          <Tab wrapped label="Legales" />
-          <Tab wrapped label="Contables" />
-          <Tab wrapped label="Fiscales" />
 
-          <Tab wrapped label="Servicios de Contribución Social" />
+          <Tab label="Administrativos" />
+          <Tab label="Legales" />
+          <Tab label="Contables" />
+          <Tab label="Fiscales" />
+
+          <Tab label="Servicios de Contribución Social" />
         </Tabs>
 
         <TabPanel value={value} index={0}>
@@ -115,14 +129,21 @@ const OurServices: React.FC = () => {
             <div className='text-corp'>
               <BasicList items={servicioSocial} />
             </div>
-              <img className='image' src={image3} alt="Service 1" style={{ width: '100%' }} />
+            <img style={{
+              transition: "opacity 0.5s ease-in-out",
+            }}
+
+              className='image' src={image3} alt="Service 1" style={{ width: '50%' }} />
           </div>
 
         </TabPanel>
 
         <TabPanel value={value} index={1}>
           <div className='corpSolutions'>
-            <img className='image' src={image5} alt="Service 1" style={{ width: '100%' }} />
+            <img style={{
+              transition: "opacity 0.5s ease-in-out",
+            }}
+              className='image' src={image5} alt="Service 1" style={{ width: '50%' }} />
             <div className='text-corp'>
               <BasicList items={legales} />
             </div>
@@ -137,12 +158,18 @@ const OurServices: React.FC = () => {
               <BasicList items={contables} />
             </div>
 
-            <img className='image' src={contabilidadImg} alt="Service 1" style={{ width: '100%' }} />
+            <img style={{
+              transition: "opacity 0.5s ease-in-out",
+            }}
+              className='image' src={contabilidadImg} alt="Service 1" style={{ width: '50%' }} />
           </div>
         </TabPanel>
         <TabPanel value={value} index={3}>
           <div className='corpSolutions'>
-            <img className='image' src={taxes} alt="Service 1" style={{ width: '100%' }} />
+            <img style={{
+              transition: "opacity 0.5s ease-in-out",
+            }}
+              className='image' src={taxes} alt="Service 1" style={{ width: '50%' }} />
             <div className='text-corp'>
               <BasicList items={fiscales} />
             </div>
@@ -156,7 +183,10 @@ const OurServices: React.FC = () => {
             <div className='text-corp'>
               <BasicList items={consSocial} />
             </div>
-            <img className='image' src={socialContri} alt="Service 1" style={{ width: '100%' }} />
+            <img style={{
+              transition: "opacity 0.5s ease-in-out",
+            }}
+              className='image' src={socialContri} alt="Service 1" style={{ width: '50%' }} />
           </div>
         </TabPanel>
       </Box>

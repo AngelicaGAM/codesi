@@ -18,10 +18,11 @@ const Header: React.FC = () => {
     display: 'flex',
     justifyContent: isMobile ? 'space-between' : 'space-around',
     alignItems: 'center',
-    padding: '0.5rem 1rem',
+    padding: '0.5rem 2rem',
     backgroundColor: '#fff',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-    borderBottom: '2px solid #ff6100'
+    borderBottom: '2px solid #ff6100',
+    
   };
 
 
@@ -30,8 +31,22 @@ const Header: React.FC = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
+  const mobileClick = (text) =>{
+    toggleMenu();
+  }
+
+  const scrollToSection = (id: string) => {
+    toggleMenu();
+    setTimeout(() => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 300);
+  };
+
   return (
-    <header style={headerStyles}>
+    <header   style={headerStyles}>
       <div>
         <img
           src={logo}
@@ -39,12 +54,12 @@ const Header: React.FC = () => {
           style={logoStyles}
         />
       </div>
-      <div 
-      className='textWhats'>
+      <div
+        className='textWhats'>
         {!isMobile && (
           <nav className='menu-header' style={navStyles}>
             <motion.a
-              href="#serviciosRef"
+              href="#servicios"
               style={navLinkStyles}
               whileHover={{ scale: 1.1 }}
               initial="hidden"
@@ -57,7 +72,7 @@ const Header: React.FC = () => {
             <motion.a
               href="#clientes"
               style={navLinkStyles}
-               whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1 }}
               initial="hidden"
               animate="visible"
               variants={menuVariants}
@@ -68,7 +83,7 @@ const Header: React.FC = () => {
             <motion.a
               href="#contacto"
               style={navLinkStyles}
-               whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1 }}
               initial="hidden"
               animate="visible"
               variants={menuVariants}
@@ -113,14 +128,23 @@ const Header: React.FC = () => {
               animate={{ x: 0 }}
               transition={{ duration: 0.3 }}
               style={mobileMenuContainerStyles}
-            >
-              <div style={menuCloseIconStyles} onClick={toggleMenu}>
-                <FiX size={24} />
+            ><div className='divmobile'>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  style={logoStyles}
+                />
+                <div style={menuCloseIconStyles} onClick={toggleMenu}>
+                  <FiX size={34} />
+                </div>
               </div>
+
               <nav style={mobileMenuStyles}>
-                <a href="#section1" style={mobileNavLinkStyles} onClick={toggleMenu}>Sección 1</a>
-                <a href="#section2" style={mobileNavLinkStyles} onClick={toggleMenu}>Sección 2</a>
-                <a href="#section3" style={mobileNavLinkStyles} onClick={toggleMenu}>Sección 3</a>
+             
+
+                <div style={mobileNavLinkStyles} onClick={() => scrollToSection('servicios')}>Servicios</div>
+                <div style={mobileNavLinkStyles} onClick={() => scrollToSection('clientes')}>Clientes</div>
+                <div style={mobileNavLinkStyles} onClick={() => scrollToSection('contacto')}>Contacto</div>
               </nav>
             </motion.div>
           )}
@@ -170,7 +194,7 @@ const mobileMenuContainerStyles: React.CSSProperties = {
   top: 0,
   left: 0,
   width: '100%',
-  height: '50vh',
+  height: '100vh',
   backgroundColor: '#fff',
   zIndex: 1000,
   display: 'flex',
@@ -184,6 +208,8 @@ const menuCloseIconStyles: React.CSSProperties = {
   alignSelf: 'flex-end',
   padding: '10px',
   cursor: 'pointer',
+  color: 'rgb(4, 21, 64)',
+
 };
 
 const mobileMenuStyles: React.CSSProperties = {
@@ -192,7 +218,8 @@ const mobileMenuStyles: React.CSSProperties = {
   justifyContent: 'center',
   alignItems: 'center',
   gap: '4rem',
-  marginTop: '20px',
+  marginTop: '40px',
+  width: '100%'
 };
 
 const mobileNavLinkStyles: React.CSSProperties = {

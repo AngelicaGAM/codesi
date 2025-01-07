@@ -19,6 +19,14 @@ import kratz from '/images/logosClientes/krastz.jpg';
 import sukarne from '/images/logosClientes/suKarne.png';
 import santaClara from '/images/logosClientes/santaClara.jpg';
 import laCostena from '/images/logosClientes/laCostena.png';
+import concienti from '/images/logosClientes/adriana2.jpg';
+import genera from '/images/logosClientes/genera2.jpg';
+import kraken2 from '/images/logosClientes/kraken2.png';
+import suites2 from '/images/logosClientes/suites2.jpg';
+import octavio from '/images/logosClientes/octavio2.jpeg';
+import therapy from '/images/logosClientes/therapy.png';
+import TROPICAL2 from '/images/logosClientes/TROPICAL2.jpg';
+import qprestige from '/images/logosClientes/qprestige.jpg';
 import AOS from "aos";
 import "aos/dist/aos.css";
 const App = () => {
@@ -28,13 +36,21 @@ const App = () => {
         });
     }, []);
     const logos = [
-        crystal,
+        kraken2,
+        santaClara,
+        laCostena,
         yeahSmile,
         hospital,
         kratz,
+        therapy,
         sukarne,
-        santaClara,
-        laCostena
+        crystal,
+        concienti,
+        genera,
+        qprestige,
+        octavio,
+        suites2,
+        TROPICAL2
     ];
     // const title = "Ofrecemos soluciones corporativas integrales";
     // const content = [

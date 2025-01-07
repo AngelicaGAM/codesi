@@ -40,30 +40,33 @@ const Footer: React.FC = () => {
       </div>
       <div className='footerLocation' style={columnStylesDown}>
         <motion.div
+        className='locationItem'
           style={contactItemStyles}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaMapMarkerAlt style={iconStyles} />
-          <span style={textStylesMap}> Supermanzana 96, Mz.8 Lt.1
+          <span className='textMaps' style={textStylesMap}> Supermanzana 96, Mz.8 Lt.1
           CP 77535, Benito Juarez, Quintana Roo.</span>
         </motion.div>
         <motion.div
+        className='locationItem'
           style={contactItemStyles}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaMapMarkerAlt style={iconStyles} />
-          <span style={textStylesMap}>Montecito Número 38, Piso 28, Oficina 16, Colonia
+          <span className='textMaps' style={textStylesMap}>Montecito Número 38, Piso 28, Oficina 16, Colonia
           Napoles CP 03810, Benito Juarez, Wtc Cdmx</span>
         </motion.div>
         <motion.div
+        className='locationItem'
           style={contactItemStyles}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaMapMarkerAlt style={iconStyles} />
-          <span style={textStylesMap}>Calle 22 Número 290 x 31 Poliginon 108.
+          <span className='textMaps' style={textStylesMap}>Calle 22 Número 290 x 31 Poliginon 108.
           CP 97143</span>
         </motion.div>
 
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
 const footerStyles: React.CSSProperties = {
   display: 'grid',
   justifyContent: 'normal',
-  padding: '1rem 6rem',
+  padding: '1rem 4rem',
   backgroundColor: 'rgb(4 21 64)',
   flexWrap: 'wrap',
 };
@@ -127,9 +130,9 @@ const textStylesMap: React.CSSProperties = {
   fontSize: '1rem',
   color: 'white',
   fontWeight: '100',
-  alignSelf: 'center',
+  alignSelf: 'flex-start',
   textAlign: 'justify',
-  maxWidth: '250px'
+  maxWidth: '220px'
 };
 
 export default Footer;
