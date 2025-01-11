@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { FaInstagram } from "react-icons/fa";
 import logo from '/images/gcodesi.png';
 import './header.css';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -22,7 +23,7 @@ const Header: React.FC = () => {
     backgroundColor: '#fff',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
     borderBottom: '2px solid #ff6100',
-    
+
   };
 
 
@@ -31,22 +32,22 @@ const Header: React.FC = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
-  const mobileClick = (text) =>{
+  const mobileClick = (text) => {
     toggleMenu();
   }
 
   const scrollToSection = (id: string) => {
     toggleMenu();
     setTimeout(() => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }, 300);
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 300);
   };
 
   return (
-    <header   style={headerStyles}>
+    <header style={headerStyles}>
       <div>
         <img
           src={logo}
@@ -97,22 +98,33 @@ const Header: React.FC = () => {
 
         {/* Botón de WhatsApp (solo en Desktop) */}
         {!isMobile && (
-          <motion.a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={buttonStyles}
-            whileHover={{ scale: 1.1 }}
+          <>
+            <motion.a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={buttonStyles}
+              whileHover={{ scale: 1.1 }}
 
-            transition={{
-              ease: "linear",
-              duration: 2,
-              x: { duration: 1 }
-            }}
-          >
-            <FaWhatsapp style={iconStyles} />
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 }
+              }}
+            >
 
-          </motion.a>
+              <FaWhatsapp style={iconStyles} />
+
+            </motion.a>
+            {/* <motion.a
+              style={buttonStyles}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaInstagram style={iconStyles} />
+
+            </motion.a> */}
+          </>
         )}
       </div>
       {/* Menú Sandwich para Mobile */}
@@ -120,6 +132,7 @@ const Header: React.FC = () => {
         <>
           <div style={menuIconStyles} onClick={toggleMenu}>
             <FiMenu size={24} />
+
           </div>
 
           {isMenuOpen && (
@@ -140,7 +153,7 @@ const Header: React.FC = () => {
               </div>
 
               <nav style={mobileMenuStyles}>
-             
+
 
                 <div style={mobileNavLinkStyles} onClick={() => scrollToSection('servicios')}>Servicios</div>
                 <div style={mobileNavLinkStyles} onClick={() => scrollToSection('clientes')}>Clientes</div>

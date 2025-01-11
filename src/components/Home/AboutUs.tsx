@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
         textAlign: 'center'
       }}
     >
-      <h2 className='servicesBottom'> Nuestra Misión</h2>
+      <p className='titlesGC servicesBottom'> Nuestra Misión</p>
       <p style={{ maxWidth: '900px', margin: '20px auto', color: '#555', fontWeight:'600' }}>
         Proporcionar servicios profesionales
         de alta calidad y soluciones

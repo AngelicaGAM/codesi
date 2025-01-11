@@ -17,7 +17,7 @@ const DesignedServices: React.FC = () => {
     className='boxServices'
      sx={{ textAlign: 'center', padding: '40px 20px' }}>
       <p className='titleServices'>  
-        Nuestros  <h2> Servicios Profesionales </h2> están diseñados para: </p>
+        Nuestros  <p className='titlesGC'> Servicios Profesionales </p> están diseñados para: </p>
     
 
       <div className='gridServices'>

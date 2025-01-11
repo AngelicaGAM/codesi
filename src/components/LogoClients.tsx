@@ -23,7 +23,7 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
           dots: true
@@ -32,8 +32,7 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
           initialSlide: 2
         }
       },
@@ -78,7 +77,7 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
     <div id="clientes" style={{ width: "80%", margin: " 4rem auto 3rem auto ",  }}>
       <p className='titleServices'>  
       Algunos de  
-      <h2   className='servicesBottom'  > Nuestros Clientes</h2>
+      <span  className='titlesGC servicesBottom'  > Nuestros Clientes</span>
       </p>
       <Slider {...settings}>
         {logos.map((logo, index) => (

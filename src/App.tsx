@@ -17,7 +17,6 @@ import './App.css';
 import crystal from '/images/logosClientes/CRYSTAL.webp';
 import yeahSmile from '/images/logosClientes/yeahsmile.png';
 import hospital from '/images/logosClientes/hospitalAngels.jpeg';
-import kratz from '/images/logosClientes/krastz.jpg';
 import sukarne from '/images/logosClientes/suKarne.png';
 import santaClara from '/images/logosClientes/santaClara.jpg';
 import laCostena from '/images/logosClientes/laCostena.png';
@@ -26,7 +25,6 @@ import genera from '/images/logosClientes/genera2.jpg';
 import kraken2 from '/images/logosClientes/kraken2.png';
 import suites2 from '/images/logosClientes/suites2.jpg';
 import octavio from '/images/logosClientes/octavio2.jpeg';
-import therapy from '/images/logosClientes/therapy.png';
 import TROPICAL2 from '/images/logosClientes/TROPICAL2.jpg';
 import qprestige from '/images/logosClientes/qprestige.jpg';
 import AOS from "aos";
@@ -44,23 +42,16 @@ const App: React.FC = () => {
   const logos = [
     
     kraken2,
-    
     santaClara,
     laCostena,
     yeahSmile,
     hospital,
-    kratz,
-    therapy,
     sukarne,
-    
-   
     crystal,
     concienti,
     genera,
     qprestige,
-
     octavio,
-    
     suites2,
     TROPICAL2
   ]

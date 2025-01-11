@@ -110,7 +110,7 @@ const ContactForm: React.FC = () => {
 
 
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-        <h2 className='servicesBottom'>Contáctanos</h2>
+        <p className='titlesGC servicesBottom'>Contáctanos</p>
         <div className='container-div'>
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
@@ -175,7 +175,7 @@ const ContactForm: React.FC = () => {
         </div>
 
 
-        <button type="submit">Enviar Mensaje</button>
+        <button type="submit">Enviar</button>
       </form>
 
       {!isMobile &&

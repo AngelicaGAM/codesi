@@ -8,6 +8,11 @@
     }
 }
 
+.footerS{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
 .footer {
     font-weight: bold;
     font-size: 16px;

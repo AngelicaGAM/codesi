@@ -1,7 +1,6 @@
 import React from 'react';
 // import { useMediaQuery } from 'react-responsive';
 import image from '/images/services/image2.jpg'
-import video from '/images/video/videoBanner.mp4'
 import './home.css';
 
 
@@ -19,13 +18,11 @@ const Home: React.FC = () => {
           style={mediaStyles}
         />
       ) : (
-        <video
-          src={video}
-          style={mediaStyles}
-          autoPlay
-          loop
-          muted
-        />
+        <img
+        src={image}
+        alt="Mobile Image"
+        style={mediaStyles}
+      />
       )}
       <div className='divTextBanner' style={overlayStyles}>
         <div className='wrapperText' style={textstylesDiv}>
