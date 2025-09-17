@@ -22,6 +22,11 @@ import octavio from '/images/logosClientes/santiago.png';
 import capillasNegro from '/images/logosClientes/capillasNegro.png';
 import TROPICAL2 from '/images/logosClientes/TROPICAL2.jpg';
 import AOS from "aos";
+import cleanpro from "/images/logosClientes/CleanPro.png";
+import zuma from "/images/logosClientes/ZUMA.png";
+import kioscoverde from "/images/logosClientes/kioscoverde.png";
+import kukulkan from "/images/logosClientes/Kukulcan.png";
+import prat from "/images/logosClientes/prat.png";
 import "aos/dist/aos.css";
 const App = () => {
     useEffect(() => {
@@ -30,15 +35,20 @@ const App = () => {
         });
     }, []);
     const logos = [
+        octavio,
+        kioscoverde,
+        zuma,
+        kukulkan,
         capillasNegro,
-        kraken2,
         laCostena,
         sukarne,
+        kraken2,
         concienti,
         genera,
-        octavio,
+        prat,
         suites2,
-        TROPICAL2
+        cleanpro,
+        TROPICAL2,
     ];
     // const title = "Ofrecemos soluciones corporativas integrales";
     // const content = [

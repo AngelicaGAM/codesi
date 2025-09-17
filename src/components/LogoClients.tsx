@@ -15,7 +15,7 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
     infinite: true,
     speed: 4000,
     slidesToShow: 4, 
-    slidesToScroll: 3, // Desplazarse de una en una
+    slidesToScroll: 2, // Desplazarse de una en una
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
