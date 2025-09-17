@@ -12,19 +12,15 @@ import WhatsAppButton from './components/WhatsAppButton';
 import PartnerCompany from './components/PartnerCompany';
 import './font.css';
 import './App.css';
-import crystal from '/images/logosClientes/CRYSTAL.webp';
-import yeahSmile from '/images/logosClientes/yeahsmile.png';
-import hospital from '/images/logosClientes/hospitalAngels.jpeg';
 import sukarne from '/images/logosClientes/suKarne.png';
-import santaClara from '/images/logosClientes/santaClara.jpg';
 import laCostena from '/images/logosClientes/laCostena.png';
 import concienti from '/images/logosClientes/adriana2.jpg';
-import genera from '/images/logosClientes/genera2.jpg';
+import genera from '/images/logosClientes/generaLux.png';
 import kraken2 from '/images/logosClientes/kraken2.png';
 import suites2 from '/images/logosClientes/suites2.jpg';
-import octavio from '/images/logosClientes/octavio2.jpeg';
+import octavio from '/images/logosClientes/santiago.png';
+import capillasNegro from '/images/logosClientes/capillasNegro.png';
 import TROPICAL2 from '/images/logosClientes/TROPICAL2.jpg';
-import qprestige from '/images/logosClientes/qprestige.jpg';
 import AOS from "aos";
 import "aos/dist/aos.css";
 const App = () => {
@@ -34,16 +30,12 @@ const App = () => {
         });
     }, []);
     const logos = [
+        capillasNegro,
         kraken2,
-        santaClara,
         laCostena,
-        yeahSmile,
-        hospital,
         sukarne,
-        crystal,
         concienti,
         genera,
-        qprestige,
         octavio,
         suites2,
         TROPICAL2

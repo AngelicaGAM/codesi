@@ -4,8 +4,9 @@
 }
 
 
+
 .imgClientes{
-    /* background: red; */
+    border-radius: 5px;
     width: 80% !important;
     height: 110px !important;
     object-fit: contain !important; 

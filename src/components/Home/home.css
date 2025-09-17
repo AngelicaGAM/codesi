@@ -40,6 +40,7 @@ section {
     height: 75vh !important;
   }
   .wrapperText{
+    text-align: left;
     padding: 5rem !important;
   }
 }

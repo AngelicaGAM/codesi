@@ -1,5 +1,5 @@
 .hover-image {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .css-heg063-MuiTabs-flexContainer {
@@ -8,7 +8,6 @@
 
 .css-19kzrtu {
   padding: 1rem 2rem !important;
-
 }
 
 .corpSolutions {
@@ -21,13 +20,11 @@
 
 .css-3up7ia-MuiButtonBase-root-MuiTab-root {
   max-width: 200px !important;
-
 }
 
 .css-ydmrf2 {
   max-width: 50%;
 }
-
 
 .tabsC button:hover {
   background: transparent !important;
@@ -52,11 +49,11 @@
 
 .image {
   object-fit: cover;
-  /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   height: 350px;
   width: 300px;
 }
-
 
 /* .image:hover {
   transform: scale(1.1);
@@ -83,8 +80,6 @@
     align-content: center;
   }
 
-
-
   @media (max-width: 768px) {
     display: grid;
 
@@ -93,5 +88,6 @@
     }
   }
 
-  @media (min-width: 768px) {}
+  @media (min-width: 768px) {
+  }
 }

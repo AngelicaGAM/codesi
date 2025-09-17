@@ -29,7 +29,13 @@
     @media (max-width: 768px) {
         display: grid !important;
         justify-content: center !important;
-
+        gap: 1rem;
+     span{
+           width: 50%;
+     }
+     .locationItem{
+        justify-content: center;
+     }
     }
 
 }
@@ -43,4 +49,10 @@
         width: 100%;
 
     }
+}
+
+.locationItem{
+    margin: 0 !important; 
+    text-align: center;
+    display: flex;
 }

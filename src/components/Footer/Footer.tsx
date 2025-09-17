@@ -63,6 +63,7 @@ const Footer: React.FC = () => {
           <span className='textMaps' style={textStylesMap}> Supermanzana 96, Mz.8 Lt.1
             CP 77535, Benito Juarez, Quintana Roo.</span>
         </motion.div>
+      
         <motion.div
           className='locationItem'
           style={contactItemStyles}
@@ -70,17 +71,7 @@ const Footer: React.FC = () => {
           whileTap={{ scale: 0.95 }}
         >
           <TfiLocationPin style={iconStyles} />
-          <span className='textMaps' style={textStylesMap}>Montecito Número 38, Piso 28, Oficina 16, Colonia
-            Napoles CP 03810, Benito Juarez, Wtc Cdmx</span>
-        </motion.div>
-        <motion.div
-          className='locationItem'
-          style={contactItemStyles}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <TfiLocationPin style={iconStyles} />
-          <span className='textMaps' style={textStylesMap}>Calle 22 Número 290 x 31 Poliginon 108.
+          <span className='textMaps' style={textStylesMap}>Calle 22 Número 290 x 31 Poliginon 108. 
             CP 97143</span>
         </motion.div>
 

@@ -142,10 +142,11 @@ const OurServices: React.FC = () => {
              <BasicList items={servicioSocial} />
            </div>
            <img style={{
+            width: '50%',
              transition: "opacity 0.5s ease-in-out",
            }}
 
-             className='image' src={image3} alt="Service 1" style={{ width: '50%' }} />
+             className='image' src={image3} alt="Service 1"  />
          </div>
 
        </TabPanel>
@@ -153,9 +154,10 @@ const OurServices: React.FC = () => {
        <TabPanel value={value} index={1}>
          <div className='corpSolutions'>
            <img style={{
+            width: '50%',
              transition: "opacity 0.5s ease-in-out",
            }}
-             className='image' src={image5} alt="Service 1" style={{ width: '50%' }} />
+             className='image' src={image5} alt="Service 1" />
            <div className='text-corp'>
              <BasicList items={legales} />
            </div>
@@ -171,17 +173,19 @@ const OurServices: React.FC = () => {
            </div>
 
            <img style={{
+            width: '50%',
              transition: "opacity 0.5s ease-in-out",
            }}
-             className='image' src={contabilidadImg} alt="Service 1" style={{ width: '50%' }} />
+             className='image' src={contabilidadImg} alt="Service 1" />
          </div>
        </TabPanel>
        <TabPanel value={value} index={3}>
          <div className='corpSolutions'>
            <img style={{
+            width: '50%',
              transition: "opacity 0.5s ease-in-out",
            }}
-             className='image' src={taxes} alt="Service 1" style={{ width: '50%' }} />
+             className='image' src={taxes} alt="Service 1"  />
            <div className='text-corp'>
              <BasicList items={fiscales} />
            </div>
@@ -196,9 +200,10 @@ const OurServices: React.FC = () => {
              <BasicList items={consSocial} />
            </div>
            <img style={{
+            width: '50%',
              transition: "opacity 0.5s ease-in-out",
            }}
-             className='image' src={socialContri} alt="Service 1" style={{ width: '50%' }} />
+             className='image' src={socialContri} alt="Service 1" />
          </div>
        </TabPanel>
      </Box>

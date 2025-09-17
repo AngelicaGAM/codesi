@@ -26,7 +26,9 @@ const LogoClients: React.FC<LogoClientsProps> = ({ logos }) => {
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false,
+          pauseOnHover: true,
+
         }
       },
       {

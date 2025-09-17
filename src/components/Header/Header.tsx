@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaInstagram } from "react-icons/fa";
 import logo from '/images/gcodesi.png';
 import './header.css';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -32,9 +31,7 @@ const Header: React.FC = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
-  const mobileClick = (text) => {
-    toggleMenu();
-  }
+
 
   const scrollToSection = (id: string) => {
     toggleMenu();
@@ -100,7 +97,7 @@ const Header: React.FC = () => {
         {!isMobile && (
           <>
             <motion.a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/message/BG2FXZPX7UMLM1"
               target="_blank"
               rel="noopener noreferrer"
               style={buttonStyles}

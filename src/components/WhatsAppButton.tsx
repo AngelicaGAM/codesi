@@ -6,7 +6,7 @@ const WhatsAppButton: React.FC = () => {
   const handleClick = () => {
     //const phoneNumber = "+529983030726"; // Reemplaza con tu número de teléfono
     //const message = "¡Hola! Me gustaría obtener más información.";
-    const url = "https://wa.me/message/BZEQK43VJOIZF1"
+    const url = "https://wa.me/message/BG2FXZPX7UMLM1"
     window.open(url, '_blank');
   };
 
