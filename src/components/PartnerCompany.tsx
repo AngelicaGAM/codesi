@@ -14,13 +14,13 @@ const PartnerCompany: React.FC = () => {
                     <img className='imageCompanyes' src={`${BASE_URL}/empresas/tyrion.png`} />
                 </a>
 
-                {/* <img className='imageCompanyes' src={`${BASE_URL}/empresas/logo_liz.jpg`} /> */}
+                <img className='imageCompanyes' src={`${BASE_URL}/empresas/exciss.png`} />
 
                 <a href='https://kasterz.com' 
                    target="_blank">
                     <img className='imageCompanyes' src='/images/empresas/krastz.png' />
                 </a>
-                {/* <img className='imageCompanyes' src={`${BASE_URL}/empresas/cra.png`} /> */}
+                <img className='imageCompanyes' src={`${BASE_URL}/empresas/Kukulcan.png`} />
 
                 <img className='imageCompanyes' src={`${BASE_URL}/empresas/uno.png`} />
 

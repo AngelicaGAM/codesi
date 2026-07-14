@@ -1,5 +1,4 @@
-// @ts-nocheck
-import React from 'react';
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -13,7 +12,6 @@ import WhatsAppButton from './components/WhatsAppButton';
 import PartnerCompany from './components/PartnerCompany';
 import './font.css';
 import './App.css';
-
 import sukarne from '/images/logosClientes/suKarne.png';
 // import laCostena from '/images/logosClientes/laCostena.png';
 import concienti from '/images/logosClientes/adriana2.jpg';
@@ -25,60 +23,38 @@ import capillasNegro from '/images/logosClientes/capillasNegro.png';
 import TROPICAL2 from '/images/logosClientes/TROPICAL2.jpg';
 import AOS from "aos";
 import cleanpro from "/images/logosClientes/CleanPro.png";
-import zuma from "/images/logosClientes/ZUMA.png"
+import zuma from "/images/logosClientes/ZUMA.png";
 import kioscoverde from "/images/logosClientes/kioscoverde.png";
 import prat from "/images/logosClientes/prat.png";
 import pacifico from "/images/logosClientes/pacifico-cliente.png";
 import "aos/dist/aos.css";
-
-
-const App: React.FC = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000
-    });
-  }, [])
-
-
-  const logos = [
-    octavio,
-    kioscoverde,
-    zuma,
-    capillasNegro,
-    pacifico,
-    // laCostena,
-    sukarne,
-    kraken2,
-    concienti,
-    genera,
-    prat,
-    suites2,
-    cleanpro,
-    TROPICAL2,
-  ]
-
-  // const title = "Ofrecemos soluciones corporativas integrales";
-  // const content = [
-  //   "Que incluyen consultoría de negocios para alta dirección de empresa, consultoría financiera, consultoría de marketing, consultoría de gestión, consultoría contable y fiscal, consultoría de capital humano y consultoría jurídica.",
-  //   "Nuestros servicios están diseñados para otorgarlos de manera presencial y en línea."
-  // ];
-
-
-
-  return (
-    <div className="App">
-      <Header />
-      <Home />
-      <AboutUs />
-      <DesignedServices />
-      <OurServices />
-      <PartnerCompany />
-      <LogoClients logos={logos} />
-      <ContactForm />
-      <WhatsAppButton />
-      <Footer />
-    </div>
-  );
+const App = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
+    const logos = [
+        octavio,
+        kioscoverde,
+        zuma,
+        capillasNegro,
+        pacifico,
+        // laCostena,
+        sukarne,
+        kraken2,
+        concienti,
+        genera,
+        prat,
+        suites2,
+        cleanpro,
+        TROPICAL2,
+    ];
+    // const title = "Ofrecemos soluciones corporativas integrales";
+    // const content = [
+    //   "Que incluyen consultoría de negocios para alta dirección de empresa, consultoría financiera, consultoría de marketing, consultoría de gestión, consultoría contable y fiscal, consultoría de capital humano y consultoría jurídica.",
+    //   "Nuestros servicios están diseñados para otorgarlos de manera presencial y en línea."
+    // ];
+    return (_jsxs("div", { className: "App", children: [_jsx(Header, {}), _jsx(Home, {}), _jsx(AboutUs, {}), _jsx(DesignedServices, {}), _jsx(OurServices, {}), _jsx(PartnerCompany, {}), _jsx(LogoClients, { logos: logos }), _jsx(ContactForm, {}), _jsx(WhatsAppButton, {}), _jsx(Footer, {})] }));
 };
-
 export default App;
