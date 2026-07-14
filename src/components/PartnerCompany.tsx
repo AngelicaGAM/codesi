@@ -20,7 +20,7 @@ const PartnerCompany: React.FC = () => {
                    target="_blank">
                     <img className='imageCompanyes' src='/images/empresas/krastz.png' />
                 </a>
-                <img className='imageCompanyes' src={`${BASE_URL}/empresas/cra.png`} />
+                {/* <img className='imageCompanyes' src={`${BASE_URL}/empresas/cra.png`} /> */}
 
                 <img className='imageCompanyes' src={`${BASE_URL}/empresas/uno.png`} />
 

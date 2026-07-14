@@ -9,7 +9,7 @@
     
     
     "strict": false,
-    "noEmit": false,
+    "noEmit": true,
     "allowImportingTsExtensions":false,
     "noEmitOnError":false,
     "skipLibCheck": true,
