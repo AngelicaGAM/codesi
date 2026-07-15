@@ -9,26 +9,22 @@ const PartnerCompany: React.FC = () => {
         <section className='PartnerCompany'>
             <p className='titlesGC title'>Empresas de GRUPO CODESI</p>
             <div className='imagesdiv'>
-                <a href="https://www.instagram.com/tyrionburgers?igsh=emF3ZndvOXV6MnNy"
-                   target="_blank">
-                    <img className='imageCompanyes' src={`${BASE_URL}/empresas/tyrion.png`} />
-                </a>
+                
+                <img className='imageCompanyes' src={`${BASE_URL}/empresas/atrezzo.png`} />
+                
 
                 <img className='imageCompanyes' src={`${BASE_URL}/empresas/exciss.png`} />
-
+                 <a href='https://www.instagram.com/elephant_cun?igsh=MTN3aTZiOGJod3NkNA=='
+                   target="_blank">
+                    <img className='imageCompanyes' src={`${BASE_URL}/empresas/elephant-nuevo.png`} />
+                </a>
                 <a href='https://kasterz.com' 
                    target="_blank">
                     <img className='imageCompanyes' src='/images/empresas/krastz.png' />
                 </a>
-                <img className='imageCompanyes' src={`${BASE_URL}/empresas/Kukulcan.png`} />
+                <img className='imageCompanyes sci-size' src={`${BASE_URL}/empresas/sci.png`} />
 
-                <img className='imageCompanyes' src={`${BASE_URL}/empresas/uno.png`} />
-
-              
-                <a href='https://www.instagram.com/elephant_cun?igsh=MTN3aTZiOGJod3NkNA=='
-                   target="_blank">
-                    <img className='imageCompanyes' src={`${BASE_URL}/empresas/elephant.png`} />
-                </a>
+               
 
             </div>
 
